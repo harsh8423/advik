@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --color-primary: #E60000;
+    --color-dark: #0A0A0A;
+    --color-light: #F5F5F5;
+    --color-accent: #1A1A1A;
+
+    --font-sans: var(--font-inter);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+    body {
+        @apply bg-dark text-light antialiased;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@layer utilities {
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    /* Custom scrollbar for thumbnail strip */
+    .scrollbar-thin::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .scrollbar-thumb-primary\/50::-webkit-scrollbar-thumb {
+        background-color: rgba(230, 0, 0, 0.5);
+        border-radius: 3px;
+    }
+
+    .scrollbar-track-white\/5::-webkit-scrollbar-track {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 3px;
+    }
 }
