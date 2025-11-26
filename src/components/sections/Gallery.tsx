@@ -20,118 +20,113 @@ export default function Gallery() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
 
-    const containerRef = useRef<HTMLDivElement>(null);
+    const leftRef = useRef<HTMLDivElement>(null);
+    const centerRef = useRef<HTMLDivElement>(null);
+    const rightRef = useRef<HTMLDivElement>(null);
 
     const getPrevIndex = (index: number) => (index - 1 + images.length) % images.length;
     const getNextIndex = (index: number) => (index + 1) % images.length;
 
     const slideNext = () => {
-        if (isAnimating || !containerRef.current) return;
+        if (isAnimating) return;
         setIsAnimating(true);
 
-        const slides = containerRef.current.querySelectorAll('.slide-item');
-        const tl = gsap.timeline({
-            onComplete: () => {
-                setCurrentIndex(getNextIndex(currentIndex));
-                setIsAnimating(false);
-            }
-        });
+        const tl = gsap.timeline();
 
-        // Animate all images sliding to the left
-        tl.to(slides[0], {
-            x: '-150%',
-            opacity: 0,
-            scale: 0.7,
-            duration: 0.7,
+        // Step 1: Slide all images to the left
+        tl.to([leftRef.current, centerRef.current, rightRef.current], {
+            x: '-=400',
+            duration: 0.6,
             ease: 'power2.inOut'
-        }, 0)
-            .to(slides[1], {
-                x: '-35%',
+        })
+            // Step 2: Fade out the left image and scale down center
+            .to(leftRef.current, {
+                opacity: 0,
+                scale: 0.7,
+                duration: 0.3
+            }, 0.2)
+            .to(centerRef.current, {
                 scale: 0.85,
                 opacity: 0.6,
                 zIndex: 5,
-                duration: 0.7,
-                ease: 'power2.inOut'
-            }, 0)
-            .to(slides[2], {
-                x: 0,
+                duration: 0.4
+            }, 0.2)
+            // Step 3: Scale up the right image to full size
+            .to(rightRef.current, {
                 scale: 1,
                 opacity: 1,
                 zIndex: 20,
-                duration: 0.7,
-                ease: 'power2.inOut'
-            }, 0);
+                duration: 0.4
+            }, 0.2)
+            // Step 4: Update index and reset positions
+            .call(() => {
+                setCurrentIndex(getNextIndex(currentIndex));
+                // Reset all positions instantly
+                gsap.set(leftRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
+                gsap.set(centerRef.current, { x: 0, scale: 1, opacity: 1, zIndex: 20 });
+                gsap.set(rightRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
+                setIsAnimating(false);
+            });
     };
 
     const slidePrev = () => {
-        if (isAnimating || !containerRef.current) return;
+        if (isAnimating) return;
         setIsAnimating(true);
 
-        const slides = containerRef.current.querySelectorAll('.slide-item');
-        const tl = gsap.timeline({
-            onComplete: () => {
-                setCurrentIndex(getPrevIndex(currentIndex));
-                setIsAnimating(false);
-            }
-        });
+        const tl = gsap.timeline();
 
-        // Animate all images sliding to the right
-        tl.to(slides[0], {
-            x: 0,
-            scale: 1,
-            opacity: 1,
-            zIndex: 20,
-            duration: 0.7,
+        // Step 1: Slide all images to the right
+        tl.to([leftRef.current, centerRef.current, rightRef.current], {
+            x: '+=400',
+            duration: 0.6,
             ease: 'power2.inOut'
-        }, 0)
-            .to(slides[1], {
-                x: '35%',
+        })
+            // Step 2: Fade out the right image and scale down center
+            .to(rightRef.current, {
+                opacity: 0,
+                scale: 0.7,
+                duration: 0.3
+            }, 0.2)
+            .to(centerRef.current, {
                 scale: 0.85,
                 opacity: 0.6,
                 zIndex: 5,
-                duration: 0.7,
-                ease: 'power2.inOut'
-            }, 0)
-            .to(slides[2], {
-                x: '150%',
-                opacity: 0,
-                scale: 0.7,
-                duration: 0.7,
-                ease: 'power2.inOut'
-            }, 0);
+                duration: 0.4
+            }, 0.2)
+            // Step 3: Scale up the left image to full size
+            .to(leftRef.current, {
+                scale: 1,
+                opacity: 1,
+                zIndex: 20,
+                duration: 0.4
+            }, 0.2)
+            // Step 4: Update index and reset positions
+            .call(() => {
+                setCurrentIndex(getPrevIndex(currentIndex));
+                // Reset all positions instantly
+                gsap.set(leftRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
+                gsap.set(centerRef.current, { x: 0, scale: 1, opacity: 1, zIndex: 20 });
+                gsap.set(rightRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
+                setIsAnimating(false);
+            });
     };
 
     useEffect(() => {
         // Initial setup
-        if (containerRef.current) {
-            const slides = containerRef.current.querySelectorAll('.slide-item');
+        gsap.set(leftRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
+        gsap.set(centerRef.current, { x: 0, scale: 1, opacity: 1, zIndex: 20 });
+        gsap.set(rightRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
 
-            gsap.set(slides[0], { x: '-35%', scale: 0.85, opacity: 0.6, zIndex: 5 });
-            gsap.set(slides[1], { x: 0, scale: 1, opacity: 1, zIndex: 20 });
-            gsap.set(slides[2], { x: '35%', scale: 0.85, opacity: 0.6, zIndex: 5 });
-
-            // Entrance animation
-            gsap.from(slides, {
-                y: 60,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.15,
-                ease: 'power3.out',
-                delay: 0.2
-            });
-        }
+        // Entrance animation
+        gsap.from([leftRef.current, centerRef.current, rightRef.current], {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out',
+            delay: 0.2
+        });
     }, []);
-
-    // Reset positions after state update
-    useEffect(() => {
-        if (containerRef.current && !isAnimating) {
-            const slides = containerRef.current.querySelectorAll('.slide-item');
-
-            gsap.set(slides[0], { x: '-35%', scale: 0.85, opacity: 0.6, zIndex: 5 });
-            gsap.set(slides[1], { x: 0, scale: 1, opacity: 1, zIndex: 20 });
-            gsap.set(slides[2], { x: '35%', scale: 0.85, opacity: 0.6, zIndex: 5 });
-        }
-    }, [currentIndex, isAnimating]);
 
     return (
         <section className="py-24 bg-dark relative overflow-hidden">
@@ -153,20 +148,18 @@ export default function Gallery() {
                 </div>
 
                 {/* Slider Container */}
-                <div className="relative h-[400px] md:h-[500px] w-full mb-12">
-                    <div
-                        ref={containerRef}
-                        className="absolute inset-0 flex items-center justify-center"
-                    >
+                <div className="relative h-[400px] md:h-[500px] w-full mb-12 overflow-hidden">
+                    <div className="absolute inset-0 flex items-center justify-center gap-8">
                         {/* Left Image */}
                         <div
-                            className="slide-item absolute w-[70%] md:w-[50%] h-[80%] left-1/2 -translate-x-1/2 cursor-pointer"
+                            ref={leftRef}
+                            className="w-[70%] md:w-[45%] h-[80%] cursor-pointer flex-shrink-0"
                             onClick={slidePrev}
                         >
                             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-xl">
                                 <Image
                                     src={images[getPrevIndex(currentIndex)]}
-                                    alt={`Gallery Image`}
+                                    alt="Gallery"
                                     fill
                                     className="object-cover"
                                 />
@@ -175,29 +168,32 @@ export default function Gallery() {
                         </div>
 
                         {/* Center Image (Active) */}
-                        <div className="slide-item absolute w-[75%] md:w-[55%] h-[90%] left-1/2 -translate-x-1/2">
+                        <div
+                            ref={centerRef}
+                            className="w-[75%] md:w-[55%] h-[90%] flex-shrink-0"
+                        >
                             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/30 shadow-2xl">
                                 <Image
                                     src={images[currentIndex]}
-                                    alt={`Gallery Image`}
+                                    alt="Gallery"
                                     fill
                                     className="object-cover"
                                     priority
                                 />
-                                {/* Gradient overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                             </div>
                         </div>
 
                         {/* Right Image */}
                         <div
-                            className="slide-item absolute w-[70%] md:w-[50%] h-[80%] left-1/2 -translate-x-1/2 cursor-pointer"
+                            ref={rightRef}
+                            className="w-[70%] md:w-[45%] h-[80%] cursor-pointer flex-shrink-0"
                             onClick={slideNext}
                         >
                             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-xl">
                                 <Image
                                     src={images[getNextIndex(currentIndex)]}
-                                    alt={`Gallery Image`}
+                                    alt="Gallery"
                                     fill
                                     className="object-cover"
                                 />
