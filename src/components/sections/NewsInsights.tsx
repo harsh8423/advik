@@ -29,7 +29,7 @@ const newsItems = [
 
 export default function NewsInsights() {
     return (
-        <section className="relative py-24 bg-dark overflow-hidden">
+        <section className="relative py-24 bg-background overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 {/* Background image using CSS */}
@@ -40,7 +40,7 @@ export default function NewsInsights() {
                     }}
                 />
                 {/* Additional top and bottom darkening for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/90 to-dark" />
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -50,9 +50,9 @@ export default function NewsInsights() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-12 md:mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                         Recent News & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-400">Insights</span>
                     </h2>
                 </motion.div>
@@ -68,10 +68,10 @@ export default function NewsInsights() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="group relative flex flex-col h-full"
                         >
-                            <div className="relative h-full bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 flex flex-col">
+                            <div className="relative h-full bg-gradient-to-br from-card/50 to-transparent backdrop-blur-sm border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 flex flex-col">
                                 {/* Image Container */}
                                 <div className="relative h-48 overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent z-10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10" />
                                     <img
                                         src={item.image}
                                         alt={item.title}
@@ -85,21 +85,21 @@ export default function NewsInsights() {
                                 </div>
 
                                 <div className="p-6 flex flex-col flex-1">
-                                    <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                                         <Calendar className="w-4 h-4 text-primary" />
                                         <span>{item.date}</span>
                                     </div>
 
-                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
+                                    <p className="text-muted-foreground text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
                                         {item.excerpt}
                                     </p>
 
-                                    <div className="mt-auto pt-4 border-t border-white/10">
-                                        <button className="flex items-center gap-2 text-white font-semibold group-hover:text-primary transition-colors duration-300">
+                                    <div className="mt-auto pt-4 border-t border-border">
+                                        <button className="flex items-center gap-2 text-foreground font-semibold group-hover:text-primary transition-colors duration-300">
                                             Read
                                             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                                         </button>

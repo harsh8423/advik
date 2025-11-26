@@ -94,23 +94,23 @@ export default function Driven() {
     return (
         <section
             ref={sectionRef}
-            className="py-32 bg-dark relative overflow-hidden"
+            className="py-32 bg-background relative overflow-hidden"
         >
             <div ref={containerRef} className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start lg:items-center">
                     {/* Left Content */}
                     <div className="lg:sticky lg:top-32">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                             Driven to Provide <br />
                             <span className="text-primary">Optimal Solutions</span>
                         </h2>
 
-                        <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                        <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                             We go beyond simple transportation. We analyze your supply chain needs and engineer custom solutions that drive efficiency and reduce costs.
                             Our commitment to excellence is unwavering.
                         </p>
 
-                        <button className="px-8 py-3 bg-transparent border border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all">
+                        <button className="px-8 py-3 bg-transparent border border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
                             Learn More
                         </button>
                     </div>
@@ -123,15 +123,15 @@ export default function Driven() {
                                 ref={(el) => {
                                     cardsRef.current[index] = el;
                                 }}
-                                className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-primary/50 transition-colors group will-change-transform"
+                                className="bg-card/50 p-6 rounded-xl border border-border hover:border-primary/50 transition-colors group will-change-transform"
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary transition-colors">
                                         <feature.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                                        <p className="text-gray-400 text-sm">{feature.description}</p>
+                                        <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
+                                        <p className="text-muted-foreground text-sm">{feature.description}</p>
                                     </div>
                                 </div>
                             </div>

@@ -5,11 +5,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
     Package,
-    ChevronLeft,
-    ChevronRight,
     ArrowRight,
     Sparkles
 } from "lucide-react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,7 +49,7 @@ export default function OurServices() {
     const sectionRef = useRef<HTMLElement>(null);
     const cardsContainerRef = useRef<HTMLDivElement>(null);
     const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-    const [activeIndex, setActiveIndex] = useState(0);
+
 
     useEffect(() => {
         if (!sectionRef.current) return;
@@ -108,27 +107,12 @@ export default function OurServices() {
         };
     }, []);
 
-    const scrollToService = (direction: "left" | "right") => {
-        if (!cardsContainerRef.current) return;
 
-        const container = cardsContainerRef.current;
-        const cardWidth = container.children[0]?.clientWidth || 0;
-        const gap = 24; // gap-6 = 24px
-        const scrollAmount = cardWidth + gap;
-
-        if (direction === "left") {
-            container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-            setActiveIndex(Math.max(0, activeIndex - 1));
-        } else {
-            container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            setActiveIndex(Math.min(services.length - 1, activeIndex + 1));
-        }
-    };
 
     return (
         <section
             ref={sectionRef}
-            className="relative py-32 bg-gradient-to-b from-black via-dark to-black overflow-hidden"
+            className="relative py-32 bg-gradient-to-b from-background via-secondary to-background overflow-hidden"
         >
             {/* Background Image */}
             <div className="absolute inset-0">
@@ -140,7 +124,7 @@ export default function OurServices() {
                     }}
                 />
                 {/* Additional top and bottom darkening for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-transparent to-dark/60" />
+                <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
             </div>
 
             {/* Background decorative elements */}
@@ -158,36 +142,18 @@ export default function OurServices() {
                             What We Offer
                         </span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                    <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
                         Our{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-red-400 to-orange-500">
                             Services
                         </span>
                     </h2>
-                    <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                         Comprehensive logistics solutions tailored to your business needs
                     </p>
                 </div>
 
-                {/* Navigation Buttons */}
-                <div className="flex justify-center gap-4 mb-8">
-                    <button
-                        onClick={() => scrollToService("left")}
-                        disabled={activeIndex === 0}
-                        className="group p-3 rounded-full bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
-                        aria-label="Previous service"
-                    >
-                        <ChevronLeft className="w-6 h-6 text-white group-hover:text-primary transition-colors" />
-                    </button>
-                    <button
-                        onClick={() => scrollToService("right")}
-                        disabled={activeIndex === services.length - 1}
-                        className="group p-3 rounded-full bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
-                        aria-label="Next service"
-                    >
-                        <ChevronRight className="w-6 h-6 text-white group-hover:text-primary transition-colors" />
-                    </button>
-                </div>
+
 
                 {/* Services Grid */}
                 <div
@@ -202,54 +168,54 @@ export default function OurServices() {
                                 ref={(el) => {
                                     cardsRef.current[index] = el;
                                 }}
-                                className="group relative snap-center will-change-transform min-w-[300px] md:min-w-0"
+                                className="group relative snap-center will-change-transform min-w-[280px] md:min-w-0"
                             >
                                 {/* Card */}
-                                <div className="relative h-full bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 overflow-hidden transition-all duration-500 hover:border-primary hover:-translate-y-2 shadow-2xl hover:shadow-primary/20">
+                                <div className="relative h-full bg-card/40 backdrop-blur-xl border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary hover:-translate-y-2 shadow-2xl hover:shadow-primary/20 flex flex-col">
                                     {/* Animated glow orb */}
-                                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                                     {/* Subtle grid pattern overlay */}
-                                    <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] transition-opacity duration-500"
+                                    <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] transition-opacity duration-500 pointer-events-none"
                                         style={{
                                             backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
                                             backgroundSize: '20px 20px'
                                         }}
                                     />
 
-                                    <div className="relative flex flex-col h-full">
-                                        {/* Image Container */}
-                                        <div className="relative mb-6 h-48 w-full overflow-hidden rounded-xl border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
-                                            <img
-                                                src={service.image}
-                                                alt={service.title}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                            />
-                                            {/* Overlay gradient */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                    {/* Image Container - Full Width */}
+                                    <div className="relative h-56 w-full overflow-hidden">
+                                        <img
+                                            src={service.image}
+                                            alt={service.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        {/* Overlay gradient */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                                            {/* Sparkle effect on hover */}
-                                            <Sparkles className="absolute top-2 right-2 w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                        </div>
+                                        {/* Sparkle effect on hover */}
+                                        <Sparkles className="absolute top-4 right-4 w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    </div>
 
+                                    <div className="relative flex flex-col flex-1 p-6 md:p-8">
                                         {/* Content */}
-                                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary/90 transition-colors duration-300">
+                                        <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary/90 transition-colors duration-300">
                                             {service.title}
                                         </h3>
-                                        <p className="text-gray-400 leading-relaxed mb-6 flex-1 group-hover:text-gray-300 transition-colors duration-300">
+                                        <p className="text-muted-foreground leading-relaxed mb-6 flex-1 group-hover:text-foreground transition-colors duration-300">
                                             {service.description}
                                         </p>
 
                                         {/* Browse button */}
-                                        <button className="group/btn relative flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 overflow-hidden">
+                                        <Link href={service.title === "Drayage" ? "/drayage" : service.title === "Warehousing & Transloading" ? "/warehousing" : "#"} className="group/btn relative flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-muted/50 border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 overflow-hidden">
                                             {/* Button glow effect */}
                                             <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
 
-                                            <span className="relative text-sm font-semibold text-white group-hover/btn:text-primary transition-colors duration-300">
+                                            <span className="relative text-sm font-semibold text-foreground group-hover/btn:text-primary transition-colors duration-300">
                                                 Learn More
                                             </span>
                                             <ArrowRight className="relative w-4 h-4 text-primary group-hover/btn:translate-x-1 transition-transform duration-300" />
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -257,30 +223,7 @@ export default function OurServices() {
                     })}
                 </div >
 
-                {/* Service Indicator Dots */}
-                < div className="flex justify-center gap-2 mt-8 lg:hidden" >
-                    {
-                        services.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => {
-                                    setActiveIndex(index);
-                                    const container = cardsContainerRef.current;
-                                    if (container) {
-                                        const cardWidth = container.children[0]?.clientWidth || 0;
-                                        const gap = 24;
-                                        container.scrollTo({ left: (cardWidth + gap) * index, behavior: "smooth" });
-                                    }
-                                }}
-                                className={`h-2 rounded-full transition-all duration-300 ${index === activeIndex
-                                    ? "w-8 bg-primary"
-                                    : "w-2 bg-white/20 hover:bg-white/40"
-                                    }`}
-                                aria-label={`Go to ${services[index].title}`}
-                            />
-                        ))
-                    }
-                </div >
+
             </div >
 
             {/* Hide scrollbar */}

@@ -61,7 +61,7 @@ export default function Hero() {
 
     return (
         <section
-            className="relative w-full h-screen overflow-hidden bg-black flex items-center justify-center"
+            className="relative w-full h-[100dvh] overflow-hidden bg-black flex items-center justify-center"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -102,7 +102,7 @@ export default function Hero() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                            <h2 className="text-xl md:text-2xl font-semibold text-primary mb-6 tracking-wider uppercase">
+                            <h2 className="text-lg md:text-2xl font-semibold text-primary mb-4 md:mb-6 tracking-wider uppercase">
                                 {carouselData[currentSlide].subtitle}
                             </h2>
                         </motion.div>
@@ -111,7 +111,7 @@ export default function Hero() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight"
+                            className="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 md:mb-8 tracking-tight"
                         >
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
                                 {carouselData[currentSlide].title}
@@ -122,7 +122,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
-                            className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
+                            className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed px-4"
                         >
                             {carouselData[currentSlide].description}
                         </motion.p>
@@ -133,11 +133,11 @@ export default function Hero() {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             className="flex flex-col md:flex-row items-center justify-center gap-4"
                         >
-                            <button className="px-8 py-4 bg-primary text-white text-lg font-bold rounded-full hover:bg-red-700 transition-all shadow-[0_0_20px_rgba(230,0,0,0.4)] hover:shadow-[0_0_30px_rgba(230,0,0,0.6)] flex items-center gap-2 group">
+                            <button className="w-full md:w-auto px-8 py-4 bg-primary text-white text-lg font-bold rounded-full hover:bg-red-700 transition-all shadow-[0_0_20px_rgba(230,0,0,0.4)] hover:shadow-[0_0_30px_rgba(230,0,0,0.6)] flex items-center justify-center gap-2 group">
                                 Read More
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
-                            <button className="px-8 py-4 bg-transparent border border-white/20 text-white text-lg font-bold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm">
+                            <button className="w-full md:w-auto px-8 py-4 bg-transparent border border-white/20 text-white text-lg font-bold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm">
                                 Get a Quote
                             </button>
                         </motion.div>
@@ -145,15 +145,15 @@ export default function Hero() {
                 </AnimatePresence>
 
                 {/* Carousel Navigation Dots */}
-                <div className="flex items-center justify-center gap-3 mt-12">
+                <div className="flex items-center justify-center gap-3 mt-8 md:mt-12">
                     {carouselData.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`transition-all duration-300 ${currentSlide === index
-                                ? "w-12 h-2 bg-primary rounded-full"
+                                ? "w-8 md:w-12 h-2 bg-primary rounded-full"
                                 : "w-2 h-2 bg-white/30 hover:bg-white/50 rounded-full"
-                                }`}
+                                } hidden md:block`}
                             aria-label={`Go to slide ${index + 1}`}
                         />
                     ))}
@@ -163,18 +163,18 @@ export default function Hero() {
             {/* Navigation Arrows */}
             <button
                 onClick={prevSlide}
-                className="absolute left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all group"
+                className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hidden md:flex items-center justify-center hover:bg-white/20 transition-all group active:scale-95"
                 aria-label="Previous slide"
             >
-                <ChevronLeft className="w-6 h-6 text-white group-hover:-translate-x-1 transition-transform" />
+                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:-translate-x-1 transition-transform" />
             </button>
 
             <button
                 onClick={nextSlide}
-                className="absolute right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all group"
+                className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hidden md:flex items-center justify-center hover:bg-white/20 transition-all group active:scale-95"
                 aria-label="Next slide"
             >
-                <ChevronRight className="w-6 h-6 text-white group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:translate-x-1 transition-transform" />
             </button>
 
         </section>

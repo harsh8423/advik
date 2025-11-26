@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-dark via-accent to-dark py-20 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-background via-accent to-background py-20 overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{
@@ -23,7 +23,7 @@ export default function AboutHero() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-12"
                 >
-                    <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
+                    <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-6">
                         About <span className="text-primary">Advik Freight</span>
                     </h1>
                     <div className="w-24 h-1 bg-primary mx-auto mb-8" />
@@ -33,7 +33,7 @@ export default function AboutHero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="space-y-6 text-lg text-gray-300 leading-relaxed"
+                    className="space-y-6 text-lg text-muted-foreground leading-relaxed"
                 >
                     <p>
                         At Advik Freight, we provide comprehensive global logistics solutions designed to simplify the complexity of your supply chain. With years of experience in transportation and freight management, we deliver customized, cost-effective, and reliable services that our clients can always trust.

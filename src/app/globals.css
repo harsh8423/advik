@@ -1,17 +1,105 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #E60000;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
     --color-dark: #0A0A0A;
+    /* Keeping for backward compatibility if needed, but should transition to background */
     --color-light: #F5F5F5;
-    --color-accent: #1A1A1A;
+    /* Keeping for backward compatibility */
 
     --font-sans: var(--font-inter);
 }
 
 @layer base {
+    :root {
+        --background: #0A0A0A;
+        --foreground: #F5F5F5;
+
+        --card: #1A1A1A;
+        --card-foreground: #F5F5F5;
+
+        --popover: #0A0A0A;
+        --popover-foreground: #F5F5F5;
+
+        --primary: #E60000;
+        --primary-foreground: #FFFFFF;
+
+        --secondary: #1A1A1A;
+        --secondary-foreground: #F5F5F5;
+
+        --muted: #1A1A1A;
+        --muted-foreground: #A3A3A3;
+
+        --accent: #1A1A1A;
+        --accent-foreground: #F5F5F5;
+
+        --destructive: #7f1d1d;
+        --destructive-foreground: #F5F5F5;
+
+        --border: #262626;
+        --input: #262626;
+        --ring: #E60000;
+    }
+
+    .light {
+        --background: #FFFFFF;
+        --foreground: #0A0A0A;
+
+        --card: #FFFFFF;
+        --card-foreground: #0A0A0A;
+
+        --popover: #FFFFFF;
+        --popover-foreground: #0A0A0A;
+
+        --primary: #E60000;
+        --primary-foreground: #FFFFFF;
+
+        --secondary: #F5F5F5;
+        --secondary-foreground: #171717;
+
+        --muted: #F5F5F5;
+        --muted-foreground: #737373;
+
+        --accent: #F5F5F5;
+        --accent-foreground: #171717;
+
+        --destructive: #ef4444;
+        --destructive-foreground: #FFFFFF;
+
+        --border: #E5E5E5;
+        --input: #E5E5E5;
+        --ring: #E60000;
+    }
+
     body {
-        @apply bg-dark text-light antialiased;
+        @apply bg-background text-foreground antialiased;
     }
 }
 
@@ -30,5 +118,19 @@
     .scrollbar-track-white\/5::-webkit-scrollbar-track {
         background-color: rgba(255, 255, 255, 0.05);
         border-radius: 3px;
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-marquee {
+        animation: marquee 40s linear infinite;
     }
 }

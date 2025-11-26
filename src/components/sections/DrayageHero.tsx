@@ -74,7 +74,7 @@ export default function DrayageHero() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full min-h-screen bg-black flex items-center justify-center py-20 overflow-hidden">
+        <section ref={sectionRef} className="relative w-full min-h-screen bg-background flex items-center justify-center py-20 overflow-hidden">
             {/* Background accents */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#ff1a1a] blur-[150px] rounded-full" />
@@ -89,20 +89,20 @@ export default function DrayageHero() {
                             Efficient Short-Distance Transport
                         </h2>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                             Drayage Services
                         </h1>
 
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                             <span className="text-primary font-semibold">Advik Freight</span> provides reliable drayage services for efficient container and cargo movement between ports, rail terminals, and distribution centers. Our solutions streamline your supply chain with precision and timely transfers for all your intermodal needs.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
-                            <button className="px-8 py-4 bg-primary text-white text-lg font-bold rounded-full hover:bg-red-700 transition-all flex items-center gap-2 group">
+                            <button className="px-8 py-4 bg-primary text-primary-foreground text-lg font-bold rounded-full hover:bg-red-700 transition-all flex items-center gap-2 group">
                                 Get Started
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
-                            <button className="px-8 py-4 bg-transparent border border-white/20 text-white text-lg font-bold rounded-full hover:bg-white/10 transition-all">
+                            <button className="px-8 py-4 bg-transparent border border-border text-foreground text-lg font-bold rounded-full hover:bg-muted/10 transition-all">
                                 Learn More
                             </button>
                         </div>

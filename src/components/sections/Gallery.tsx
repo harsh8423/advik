@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { gsap } from "gsap";
+import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
     "/images/5f3dd70103bf69f2f89f6329_reefer-1.jpg",
@@ -18,118 +18,69 @@ const images = [
 
 export default function Gallery() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
-
-    const leftRef = useRef<HTMLDivElement>(null);
-    const centerRef = useRef<HTMLDivElement>(null);
-    const rightRef = useRef<HTMLDivElement>(null);
-
-    const getPrevIndex = (index: number) => (index - 1 + images.length) % images.length;
-    const getNextIndex = (index: number) => (index + 1) % images.length;
+    const [direction, setDirection] = useState(0);
 
     const slideNext = () => {
-        if (isAnimating) return;
-        setIsAnimating(true);
-
-        const tl = gsap.timeline();
-
-        // Step 1: Slide all images to the left
-        tl.to([leftRef.current, centerRef.current, rightRef.current], {
-            x: '-=400',
-            duration: 0.6,
-            ease: 'power2.inOut'
-        })
-            // Step 2: Fade out the left image and scale down center
-            .to(leftRef.current, {
-                opacity: 0,
-                scale: 0.7,
-                duration: 0.3
-            }, 0.2)
-            .to(centerRef.current, {
-                scale: 0.85,
-                opacity: 0.6,
-                zIndex: 5,
-                duration: 0.4
-            }, 0.2)
-            // Step 3: Scale up the right image to full size
-            .to(rightRef.current, {
-                scale: 1,
-                opacity: 1,
-                zIndex: 20,
-                duration: 0.4
-            }, 0.2)
-            // Step 4: Update index and reset positions
-            .call(() => {
-                setCurrentIndex(getNextIndex(currentIndex));
-                // Reset all positions instantly
-                gsap.set(leftRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
-                gsap.set(centerRef.current, { x: 0, scale: 1, opacity: 1, zIndex: 20 });
-                gsap.set(rightRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
-                setIsAnimating(false);
-            });
+        setDirection(1);
+        setCurrentIndex((prev) => (prev + 1) % images.length);
     };
 
     const slidePrev = () => {
-        if (isAnimating) return;
-        setIsAnimating(true);
-
-        const tl = gsap.timeline();
-
-        // Step 1: Slide all images to the right
-        tl.to([leftRef.current, centerRef.current, rightRef.current], {
-            x: '+=400',
-            duration: 0.6,
-            ease: 'power2.inOut'
-        })
-            // Step 2: Fade out the right image and scale down center
-            .to(rightRef.current, {
-                opacity: 0,
-                scale: 0.7,
-                duration: 0.3
-            }, 0.2)
-            .to(centerRef.current, {
-                scale: 0.85,
-                opacity: 0.6,
-                zIndex: 5,
-                duration: 0.4
-            }, 0.2)
-            // Step 3: Scale up the left image to full size
-            .to(leftRef.current, {
-                scale: 1,
-                opacity: 1,
-                zIndex: 20,
-                duration: 0.4
-            }, 0.2)
-            // Step 4: Update index and reset positions
-            .call(() => {
-                setCurrentIndex(getPrevIndex(currentIndex));
-                // Reset all positions instantly
-                gsap.set(leftRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
-                gsap.set(centerRef.current, { x: 0, scale: 1, opacity: 1, zIndex: 20 });
-                gsap.set(rightRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
-                setIsAnimating(false);
-            });
+        setDirection(-1);
+        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
     };
 
-    useEffect(() => {
-        // Initial setup
-        gsap.set(leftRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
-        gsap.set(centerRef.current, { x: 0, scale: 1, opacity: 1, zIndex: 20 });
-        gsap.set(rightRef.current, { x: 0, scale: 0.85, opacity: 0.6, zIndex: 5 });
+    const getPosition = (index: number) => {
+        if (index === currentIndex) return "center";
 
-        // Entrance animation
-        gsap.from([leftRef.current, centerRef.current, rightRef.current], {
-            y: 60,
+        // Calculate relative index accounting for wrap-around
+        const length = images.length;
+        // We want to know if 'index' is the immediate left or right neighbor
+        // (currentIndex - 1 + length) % length === index  => Left neighbor
+        // (currentIndex + 1) % length === index          => Right neighbor
+
+        const prevIndex = (currentIndex - 1 + length) % length;
+        const nextIndex = (currentIndex + 1) % length;
+
+        if (index === prevIndex) return "left";
+        if (index === nextIndex) return "right";
+
+        return "hidden";
+    };
+
+    const variants = {
+        center: {
+            x: "0%",
+            scale: 1,
+            zIndex: 20,
+            opacity: 1,
+            transition: { duration: 0.6, ease: "easeInOut" }
+        },
+        left: {
+            x: "-60%",
+            scale: 0.85,
+            zIndex: 10,
+            opacity: 0.6,
+            transition: { duration: 0.6, ease: "easeInOut" }
+        },
+        right: {
+            x: "60%",
+            scale: 0.85,
+            zIndex: 10,
+            opacity: 0.6,
+            transition: { duration: 0.6, ease: "easeInOut" }
+        },
+        hidden: (custom: number) => ({
+            x: custom > 0 ? "120%" : "-120%", // Exit to the side it came from or is going to
+            scale: 0.5,
+            zIndex: 0,
             opacity: 0,
-            duration: 0.8,
-            stagger: 0.15,
-            ease: 'power3.out',
-            delay: 0.2
-        });
-    }, []);
+            transition: { duration: 0.6, ease: "easeInOut" }
+        })
+    };
 
     return (
-        <section className="py-24 bg-dark relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-background relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"></div>
@@ -138,68 +89,62 @@ export default function Gallery() {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                <div className="text-center mb-10 md:mb-16">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
                         Our <span className="text-primary">Gallery</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                    <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
                         A glimpse into our world of logistics, fleet, and operations.
                     </p>
                 </div>
 
                 {/* Slider Container */}
-                <div className="relative h-[400px] md:h-[500px] w-full mb-12 overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center gap-8">
-                        {/* Left Image */}
-                        <div
-                            ref={leftRef}
-                            className="w-[70%] md:w-[45%] h-[80%] cursor-pointer flex-shrink-0"
-                            onClick={slidePrev}
-                        >
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-xl">
-                                <Image
-                                    src={images[getPrevIndex(currentIndex)]}
-                                    alt="Gallery"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]" />
-                            </div>
-                        </div>
+                <div className="relative h-[300px] md:h-[500px] w-full mb-8 md:mb-12 flex justify-center items-center perspective-1000">
+                    <div className="relative w-full h-full max-w-5xl flex justify-center items-center">
+                        {images.map((src, index) => {
+                            const position = getPosition(index);
 
-                        {/* Center Image (Active) */}
-                        <div
-                            ref={centerRef}
-                            className="w-[75%] md:w-[55%] h-[90%] flex-shrink-0"
-                        >
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/30 shadow-2xl">
-                                <Image
-                                    src={images[currentIndex]}
-                                    alt="Gallery"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                            </div>
-                        </div>
+                            let custom = 0;
+                            // Simple heuristic: shortest distance
+                            const diff = (index - currentIndex + images.length) % images.length;
 
-                        {/* Right Image */}
-                        <div
-                            ref={rightRef}
-                            className="w-[70%] md:w-[45%] h-[80%] cursor-pointer flex-shrink-0"
-                            onClick={slideNext}
-                        >
-                            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-xl">
-                                <Image
-                                    src={images[getNextIndex(currentIndex)]}
-                                    alt="Gallery"
-                                    fill
-                                    className="object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]" />
-                            </div>
-                        </div>
+                            if (diff > images.length / 2) {
+                                // It's effectively on the left side
+                                custom = -1;
+                            } else {
+                                custom = 1;
+                            }
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    variants={variants}
+                                    initial={false}
+                                    animate={position}
+                                    custom={custom}
+                                    className="absolute w-[85%] md:w-[55%] aspect-[16/10] rounded-2xl overflow-hidden border border-border shadow-2xl will-change-transform"
+                                    style={{
+                                        transformOrigin: "center center"
+                                    }}
+                                >
+                                    <div className="relative w-full h-full">
+                                        <Image
+                                            src={src}
+                                            alt={`Gallery image ${index + 1}`}
+                                            fill
+                                            className="object-cover"
+                                            priority={index === currentIndex}
+                                        />
+                                        {/* Overlay for non-center items */}
+                                        <motion.div
+                                            className="absolute inset-0 bg-black"
+                                            animate={{ opacity: position === 'center' ? 0 : 0.4 }}
+                                            transition={{ duration: 0.6 }}
+                                        />
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -207,8 +152,7 @@ export default function Gallery() {
                 <div className="flex justify-center gap-4">
                     <button
                         onClick={slidePrev}
-                        disabled={isAnimating}
-                        className="group flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary hover:to-accent text-white rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-primary/50 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                        className="group flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary hover:to-accent text-foreground hover:text-primary-foreground rounded-xl border border-border hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-primary/50 hover:scale-105"
                     >
                         <ChevronLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
                         <span className="font-semibold hidden md:inline">Previous</span>
@@ -216,8 +160,7 @@ export default function Gallery() {
 
                     <button
                         onClick={slideNext}
-                        disabled={isAnimating}
-                        className="group flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary hover:to-accent text-white rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-primary/50 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                        className="group flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary hover:to-accent text-foreground hover:text-primary-foreground rounded-xl border border-border hover:border-primary/30 transition-all duration-300 shadow-lg hover:shadow-primary/50 hover:scale-105"
                     >
                         <span className="font-semibold hidden md:inline">Next</span>
                         <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />

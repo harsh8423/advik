@@ -38,7 +38,7 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="relative py-24 bg-gradient-to-b from-black via-dark to-black overflow-hidden">
+        <section className="relative py-24 bg-background overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
@@ -64,70 +64,66 @@ export default function Testimonials() {
                         <MessageSquare className="w-4 h-4 text-primary" />
                         <span className="text-sm font-semibold text-primary uppercase tracking-wider">Client Stories</span>
                     </motion.div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                         Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-400">Industry Leaders</span>
                     </h2>
-                    <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Hear from our partners about their experience with Advik Freight Logistics
                     </p>
                 </motion.div>
+            </div>
 
-                {/* Scrolling Testimonials Marquee */}
-                <div className="relative">
-                    {/* Gradient overlays for fade effect */}
-                    <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black via-black/50 to-transparent z-10 pointer-events-none" />
-                    <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black via-black/50 to-transparent z-10 pointer-events-none" />
+            {/* Scrolling Testimonials Marquee - Full Width */}
+            <div className="relative w-full">
+                <div
+                    className="flex overflow-hidden relative group"
+                    style={{
+                        maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                        WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                    }}
+                >
+                    <div
+                        className="flex gap-4 md:gap-8 py-8 px-4 md:px-0 animate-marquee group-hover:[animation-play-state:paused]"
+                        style={{ width: "max-content" }}
+                    >
+                        {/* Duplicate testimonials for seamless loop */}
+                        {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
+                            <div
+                                key={index}
+                                className="flex-shrink-0 w-[85vw] md:w-[400px] group/card"
+                            >
+                                <div className="relative bg-gradient-to-br from-card/50 via-card/30 to-transparent backdrop-blur-lg border border-border rounded-2xl p-6 md:p-8 h-full hover:border-primary/50 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary/20 flex flex-col transform hover:-translate-y-1 hover:scale-[1.02]">
+                                    {/* Glow effect on hover */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover/card:from-primary/5 group-hover/card:to-transparent rounded-2xl transition-all duration-500" />
 
-                    <div className="flex overflow-hidden">
-                        <motion.div
-                            className="flex gap-8 py-8"
-                            animate={{ x: "-50%" }}
-                            transition={{
-                                repeat: Infinity,
-                                ease: "linear",
-                                duration: 50,
-                            }}
-                        >
-                            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
-                                <motion.div
-                                    key={index}
-                                    whileHover={{ scale: 1.02, y: -5 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="flex-shrink-0 w-[400px] group"
-                                >
-                                    <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-lg border border-white/20 rounded-2xl p-8 h-full hover:border-primary/50 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary/20 flex flex-col">
-                                        {/* Glow effect on hover */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-transparent rounded-2xl transition-all duration-500" />
+                                    <div className="relative flex-1">
+                                        <Quote className="w-8 h-8 md:w-10 md:h-10 text-primary/40 mb-4" />
+                                        <p className="text-muted-foreground text-base md:text-lg italic mb-6 leading-relaxed">
+                                            "{testimonial.quote}"
+                                        </p>
+                                    </div>
 
-                                        <div className="relative flex-1">
-                                            <Quote className="w-10 h-10 text-primary/40 mb-4" />
-                                            <p className="text-gray-300 text-lg italic mb-6 leading-relaxed">
-                                                "{testimonial.quote}"
+                                    <div className="relative flex items-center gap-4 mt-auto border-t border-border pt-6">
+                                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                                            <User className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <h4 className="text-foreground font-bold group-hover/card:text-primary transition-colors duration-300 truncate">
+                                                {testimonial.author}
+                                            </h4>
+                                            <p className="text-xs md:text-sm text-muted-foreground truncate">
+                                                {testimonial.role}
                                             </p>
                                         </div>
-
-                                        <div className="relative flex items-center gap-4 mt-auto border-t border-white/10 pt-6">
-                                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 flex items-center justify-center">
-                                                <User className="w-6 h-6 text-primary" />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-white font-bold group-hover:text-primary transition-colors duration-300">
-                                                    {testimonial.author}
-                                                </h4>
-                                                <p className="text-sm text-gray-500">
-                                                    {testimonial.role}
-                                                </p>
-                                            </div>
-                                            <div className="ml-auto flex gap-1">
-                                                {[...Array(testimonial.rating)].map((_, i) => (
-                                                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                                                ))}
-                                            </div>
+                                        <div className="ml-auto flex gap-0.5 md:gap-1">
+                                            {[...Array(testimonial.rating)].map((_, i) => (
+                                                <Star key={i} className="w-3 h-3 md:w-4 md:h-4 text-yellow-500 fill-yellow-500" />
+                                            ))}
                                         </div>
                                     </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

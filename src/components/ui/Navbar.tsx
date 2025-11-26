@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Truck, Factory, Leaf, ShoppingBag, Hammer, Zap, Utensils, Ship, Plane, Box, ArrowUpRight, Map } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
     { name: "Services", href: "#services", hasMegaMenu: true },
@@ -70,9 +71,9 @@ export default function Navbar() {
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
-                scrolled || activeMegaMenu ? "bg-dark/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+                scrolled || activeMegaMenu ? "bg-background/95 backdrop-blur-md border-b border-border/10" : "bg-transparent"
             )}
-            onMouseLeave={() => setActiveMegaMenu(null)}
+            onMouseLeave={() => !mobileMenuOpen && setActiveMegaMenu(null)}
         >
             <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
                 {/* Logo */}
@@ -98,7 +99,7 @@ export default function Navbar() {
                                 href={link.href}
                                 className={cn(
                                     "text-sm font-bold uppercase tracking-wide transition-colors flex items-center gap-1",
-                                    activeMegaMenu === link.name ? "text-primary" : "text-gray-300 hover:text-white"
+                                    activeMegaMenu === link.name ? "text-primary" : "text-muted-foreground hover:text-foreground"
                                 )}
                             >
                                 {link.name}
@@ -110,20 +111,24 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* CTA Button */}
-                <div className="hidden lg:block">
-                    <button className="px-6 py-3 bg-primary text-white text-sm font-bold rounded-md hover:bg-red-700 transition-colors shadow-lg shadow-primary/20">
+                {/* CTA Button & Theme Toggle */}
+                <div className="hidden lg:flex items-center gap-4">
+                    <ThemeToggle />
+                    <button className="px-6 py-3 bg-primary text-primary-foreground text-sm font-bold rounded-md hover:bg-red-700 transition-colors shadow-lg shadow-primary/20">
                         Contact Us
                     </button>
                 </div>
 
                 {/* Mobile Menu Toggle */}
-                <button
-                    className="lg:hidden text-white"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                    {mobileMenuOpen ? <X /> : <Menu />}
-                </button>
+                <div className="lg:hidden flex items-center gap-4">
+                    <ThemeToggle />
+                    <button
+                        className="text-foreground"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        {mobileMenuOpen ? <X /> : <Menu />}
+                    </button>
+                </div>
             </div>
 
             {/* Mega Menu */}
@@ -138,20 +143,20 @@ export default function Navbar() {
                         onMouseEnter={() => setActiveMegaMenu(activeMegaMenu)}
                         onMouseLeave={() => setActiveMegaMenu(null)}
                     >
-                        <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden border border-primary/20 relative">
+                        <div className="max-w-2xl mx-auto bg-card rounded-xl shadow-2xl overflow-hidden border border-border/20 relative">
                             {/* Tooltip Arrow */}
-                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 border-t border-l border-primary/20" />
+                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-card rotate-45 border-t border-l border-border/20" />
 
                             <div className="p-3 grid grid-cols-2 gap-2 relative z-10">
                                 {getMegaMenuContent().map((item) => (
                                     <Link
                                         key={item.name}
                                         href={item.href}
-                                        className="group flex items-center justify-between p-2 rounded-lg border border-primary/20 hover:border-primary bg-white hover:bg-primary/5 transition-all duration-300"
+                                        className="group flex items-center justify-between p-2 rounded-lg border border-border/20 hover:border-primary bg-card hover:bg-primary/5 transition-all duration-300"
                                     >
                                         <div className="flex items-center gap-2">
                                             <item.icon className="w-4 h-4 text-primary" />
-                                            <span className="text-dark font-bold text-xs group-hover:text-primary transition-colors">
+                                            <span className="text-card-foreground font-bold text-xs group-hover:text-primary transition-colors">
                                                 {item.name}
                                             </span>
                                         </div>
@@ -170,20 +175,57 @@ export default function Navbar() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="lg:hidden bg-dark border-b border-white/10 overflow-hidden"
+                    className="lg:hidden bg-background border-b border-border/10 overflow-hidden"
                 >
                     <div className="flex flex-col p-6 gap-4">
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="text-lg font-medium text-gray-300 hover:text-primary"
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                {link.name}
-                            </Link>
+                            <div key={link.name} className="flex flex-col">
+                                {link.hasMegaMenu ? (
+                                    <>
+                                        <button
+                                            onClick={() => setActiveMegaMenu(activeMegaMenu === link.name ? null : link.name)}
+                                            className="flex items-center justify-between text-lg font-medium text-muted-foreground hover:text-primary py-2"
+                                        >
+                                            {link.name}
+                                            <ChevronDown className={cn("w-5 h-5 transition-transform", activeMegaMenu === link.name ? "rotate-180" : "")} />
+                                        </button>
+                                        <AnimatePresence>
+                                            {activeMegaMenu === link.name && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, height: 0 }}
+                                                    animate={{ opacity: 1, height: "auto" }}
+                                                    exit={{ opacity: 0, height: 0 }}
+                                                    className="overflow-hidden pl-4 border-l border-border/20 ml-2"
+                                                >
+                                                    <div className="flex flex-col gap-3 py-2">
+                                                        {(link.name === "Services" ? services : industries).map((item) => (
+                                                            <Link
+                                                                key={item.name}
+                                                                href={item.href}
+                                                                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary py-1"
+                                                                onClick={() => setMobileMenuOpen(false)}
+                                                            >
+                                                                <item.icon className="w-4 h-4" />
+                                                                {item.name}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </>
+                                ) : (
+                                    <Link
+                                        href={link.href}
+                                        className="text-lg font-medium text-muted-foreground hover:text-primary py-2"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                )}
+                            </div>
                         ))}
-                        <button className="w-full py-3 bg-primary text-white font-bold rounded-lg mt-4">
+                        <button className="w-full py-3 bg-primary text-primary-foreground font-bold rounded-lg mt-4">
                             Contact Us
                         </button>
                     </div>

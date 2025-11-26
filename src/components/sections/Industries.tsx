@@ -133,26 +133,26 @@ export default function Industries() {
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 md:mb-16">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
                         <Sparkles className="w-4 h-4 text-primary" />
                         <span className="text-sm font-semibold text-primary uppercase tracking-wider">
                             Industries We Serve
                         </span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                    <h2 className="text-3xl md:text-6xl font-bold text-white mb-6">
                         Trusted Across{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-red-400 to-orange-500">
                             Multiple Industries
                         </span>
                     </h2>
-                    <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
                         Delivering specialized logistics solutions tailored to your industry needs
                     </p>
                 </div>
 
                 {/* Industries Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                     {industries.map((industry, index) => {
                         const Icon = industry.icon;
                         return (

@@ -20,7 +20,7 @@ const CubeFace: React.FC<CubeFaceProps> = ({ title, description, icon, position 
 
     return (
         <div
-            className="absolute w-[300px] h-[300px] bg-gradient-to-br from-black via-neutral-950 to-black border-2 border-[#ff1a1a] flex flex-col items-center justify-center p-6 text-center"
+            className="absolute w-[300px] h-[300px] bg-gradient-to-br from-background via-secondary to-background border-2 border-primary flex flex-col items-center justify-center p-6 text-center"
             style={{
                 transform: positionStyles[position],
                 backfaceVisibility: 'hidden',
@@ -29,28 +29,28 @@ const CubeFace: React.FC<CubeFaceProps> = ({ title, description, icon, position 
         >
             {/* Icon */}
             {icon && (
-                <div className="mb-4 text-[#ff1a1a]">
+                <div className="mb-4 text-primary">
                     {icon}
                 </div>
             )}
 
             {/* Title */}
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 leading-tight">
                 {title}
             </h3>
 
             {/* Description */}
             {description && (
-                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {description}
                 </p>
             )}
 
             {/* Decorative corner accents */}
-            <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#ff3b3b]" />
-            <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#ff3b3b]" />
-            <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#ff3b3b]" />
-            <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#ff3b3b]" />
+            <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-primary/50" />
+            <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-primary/50" />
+            <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-primary/50" />
+            <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-primary/50" />
         </div>
     );
 };

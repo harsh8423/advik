@@ -195,7 +195,7 @@ export default function LottieScroll() {
 
                 cardTimeline.fromTo(nextCardContent,
                     { y: 20, opacity: 0 },
-                    { y: 0, opacity: 1, ease: "power2.out", duration: 1.0 },
+                    { y: 0, opacity: 1, x: 0, ease: "power2.out", duration: 1.0 },
                     0.4
                 );
                 cardTimeline.fromTo(nextTitle,
@@ -274,11 +274,11 @@ export default function LottieScroll() {
     }, [isReady]);
 
     return (
-        <section ref={sectionRef} className="relative bg-black py-20 overflow-hidden min-h-screen flex items-center">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <section ref={sectionRef} className="relative bg-black py-12 md:py-20 overflow-hidden min-h-screen flex items-center">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-12 px-4 md:px-12 max-w-7xl mx-auto w-full">
                 {/* Left Side - Centered Lottie (Always Running) */}
-                <div className="w-full md:w-1/2 flex items-center justify-center z-10">
-                    <div className="w-full max-w-md aspect-square">
+                <div className="w-full md:w-1/2 flex items-center justify-center z-10 mt-8 md:mt-0">
+                    <div className="w-3/4 md:w-full max-w-md aspect-square">
                         <DotLottieReact
                             src="/gemi.lottie"
                             loop={true}
@@ -290,27 +290,27 @@ export default function LottieScroll() {
 
                 {/* Right Side - Stacked Cards */}
                 <div ref={containerRef} className="w-full md:w-1/2 relative flex items-center justify-center">
-                    <div className="relative w-full" style={{ minHeight: "400px", perspective: "1000px" }}>
+                    <div className="relative w-full" style={{ minHeight: "500px", perspective: "1000px" }}>
                         {contentItems.map((item, index) => (
                             <div
                                 key={index}
-                                className="stack-card absolute top-1/2 -translate-y-1/2 left-0 w-full bg-gradient-to-br from-white/30 to-white/15 backdrop-blur-xl border border-white/30 rounded-2xl p-6 md:p-8 shadow-2xl"
+                                className="stack-card absolute top-1/2 -translate-y-1/2 left-0 w-full bg-gradient-to-br from-white/30 to-white/15 backdrop-blur-xl border border-white/30 rounded-2xl p-5 md:p-8 shadow-2xl"
                                 style={{
                                     transformStyle: "preserve-3d",
                                 }}
                             >
-                                <div className="stack-card-content flex items-start gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-primary/30 border-2 border-primary flex items-center justify-center flex-shrink-0">
-                                        <span className="text-primary font-bold text-base">
+                                <div className="stack-card-content flex flex-col md:flex-row items-start gap-3 md:gap-4">
+                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/30 border-2 border-primary flex items-center justify-center flex-shrink-0 mb-2 md:mb-0">
+                                        <span className="text-primary font-bold text-sm md:text-base">
                                             {String(index + 1).padStart(2, '0')}
                                         </span>
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <h3 className="stack-title text-2xl md:text-3xl font-bold text-white mb-4">
+                                        <h3 className="stack-title text-xl md:text-3xl font-bold text-white mb-2 md:mb-4">
                                             {item.title}
                                         </h3>
                                         <div className="stack-description overflow-hidden">
-                                            <p className="text-lg text-gray-200 leading-relaxed">
+                                            <p className="text-sm md:text-lg text-gray-200 leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </div>
