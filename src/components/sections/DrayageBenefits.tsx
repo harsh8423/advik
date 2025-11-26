@@ -1,34 +1,29 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { LuTruck, LuDollarSign, LuShield, LuClock, LuNetwork } from 'react-icons/lu';
+import { LuTruck, LuDollarSign, LuShield, LuClock, LuNetwork, LuArrowUpRight } from 'react-icons/lu';
 import Image from 'next/image';
 
 const benefits = [
     {
         icon: LuTruck,
         title: 'Efficient Cargo Movement',
-        description: 'Minimizes delays at ports, rail terminals, and warehouses.'
     },
     {
         icon: LuDollarSign,
         title: 'Cost Savings',
-        description: 'Optimized short-distance transportation reduces overall supply chain costs.'
     },
     {
         icon: LuShield,
         title: 'Enhanced Security',
-        description: 'Containers are handled by trained personnel to prevent damage or loss.'
     },
     {
         icon: LuClock,
         title: 'Flexible Scheduling',
-        description: 'Coordinated pickup and delivery times to meet your business needs.'
     },
     {
         icon: LuNetwork,
         title: 'Improved Supply Chain Reliability',
-        description: 'Smooth coordination between multiple transport modes ensures timely deliveries.'
     }
 ];
 
@@ -52,7 +47,7 @@ export default function DrayageBenefits() {
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -74,24 +69,40 @@ export default function DrayageBenefits() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ y: -10, scale: 1.02 }}
-                            className="group relative bg-gradient-to-br from-dark-lighter to-dark border border-gray-800 rounded-2xl p-8 hover:border-primary transition-all duration-300"
+                            className="group relative will-change-transform cursor-pointer"
                         >
-                            {/* Glow effect on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                            <div className="relative z-10">
-                                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <benefit.icon className="w-8 h-8 text-white" />
+                            {/* Card */}
+                            <div className="relative h-full bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 overflow-hidden transition-all duration-500 hover:border-primary hover:-translate-y-2 shadow-2xl hover:shadow-primary/20">
+                                {/* Browse Icon - Top Right */}
+                                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <LuArrowUpRight className="w-5 h-5 text-primary" />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-light mb-3 group-hover:text-primary transition-colors duration-300">
-                                    {benefit.title}
-                                </h3>
+                                {/* Animated glow orb */}
+                                <div className="absolute -top-16 -right-16 w-32 h-32 bg-primary/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                <p className="text-gray-400 leading-relaxed">
-                                    {benefit.description}
-                                </p>
+                                {/* Grid pattern overlay */}
+                                <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] transition-opacity duration-500"
+                                    style={{
+                                        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                                        backgroundSize: '20px 20px'
+                                    }}
+                                />
+
+                                <div className="relative flex flex-col items-center text-center">
+                                    {/* Icon with animated background */}
+                                    <div className="relative mb-5">
+                                        <div className="absolute inset-0 bg-primary/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                            <benefit.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
+                                        </div>
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="text-lg font-bold text-white group-hover:text-primary/90 transition-colors duration-300">
+                                        {benefit.title}
+                                    </h3>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
