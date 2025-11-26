@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 const images = [
     "/images/5f3dd70103bf69f2f89f6329_reefer-1.jpg",
@@ -48,7 +48,7 @@ export default function Gallery() {
         return "hidden";
     };
 
-    const variants = {
+    const variants: Variants = {
         center: {
             x: "0%",
             scale: 1,

@@ -135,12 +135,12 @@ const RotatingCube: React.FC<RotatingCubeProps> = ({ faces }) => {
     return (
         <div
             ref={containerRef}
-            className="flex items-center justify-center h-[500px]"
+            className="flex items-center justify-center h-[300px] md:h-[500px]"
             style={{ perspective: '1000px' }}
         >
             <div
                 ref={cubeRef}
-                className="relative w-[300px] h-[300px]"
+                className="cube-responsive relative w-[var(--cube-size)] h-[var(--cube-size)]"
                 style={{
                     transformStyle: 'preserve-3d',
                     transition: 'transform 0.3s ease-out',

@@ -133,4 +133,17 @@
     .animate-marquee {
         animation: marquee 40s linear infinite;
     }
+
+    /* Responsive Cube Variables */
+    .cube-responsive {
+        --cube-size: 300px;
+        --cube-half-size: 150px;
+    }
+
+    @media (max-width: 768px) {
+        .cube-responsive {
+            --cube-size: 200px;
+            --cube-half-size: 100px;
+        }
+    }
 }

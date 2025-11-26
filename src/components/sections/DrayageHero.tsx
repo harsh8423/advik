@@ -74,7 +74,7 @@ export default function DrayageHero() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full min-h-screen bg-background flex items-center justify-center py-20 overflow-hidden">
+        <section ref={sectionRef} className="relative w-full min-h-screen bg-background flex items-center justify-center py-12 md:py-20 overflow-hidden">
             {/* Background accents */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#ff1a1a] blur-[150px] rounded-full" />
@@ -82,7 +82,7 @@ export default function DrayageHero() {
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     {/* Left Content */}
                     <div className="space-y-6">
                         <h2 className="text-xl md:text-2xl font-semibold text-primary tracking-wider uppercase">

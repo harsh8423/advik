@@ -10,17 +10,17 @@ interface CubeFaceProps {
 const CubeFace: React.FC<CubeFaceProps> = ({ title, description, icon, position }) => {
     // Position-specific transforms for each face
     const positionStyles: Record<string, string> = {
-        front: 'rotateY(0deg) translateZ(150px)',
-        back: 'rotateY(180deg) translateZ(150px)',
-        right: 'rotateY(90deg) translateZ(150px)',
-        left: 'rotateY(-90deg) translateZ(150px)',
-        top: 'rotateX(90deg) translateZ(150px)',
-        bottom: 'rotateX(-90deg) translateZ(150px)',
+        front: 'rotateY(0deg) translateZ(var(--cube-half-size))',
+        back: 'rotateY(180deg) translateZ(var(--cube-half-size))',
+        right: 'rotateY(90deg) translateZ(var(--cube-half-size))',
+        left: 'rotateY(-90deg) translateZ(var(--cube-half-size))',
+        top: 'rotateX(90deg) translateZ(var(--cube-half-size))',
+        bottom: 'rotateX(-90deg) translateZ(var(--cube-half-size))',
     };
 
     return (
         <div
-            className="absolute w-[300px] h-[300px] bg-gradient-to-br from-background via-secondary to-background border-2 border-primary flex flex-col items-center justify-center p-6 text-center"
+            className="absolute w-[var(--cube-size)] h-[var(--cube-size)] bg-gradient-to-br from-background via-secondary to-background border-2 border-primary flex flex-col items-center justify-center p-6 text-center"
             style={{
                 transform: positionStyles[position],
                 backfaceVisibility: 'hidden',
@@ -41,7 +41,7 @@ const CubeFace: React.FC<CubeFaceProps> = ({ title, description, icon, position 
 
             {/* Description */}
             {description && (
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed hidden md:block">
                     {description}
                 </p>
             )}
