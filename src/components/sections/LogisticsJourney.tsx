@@ -4,6 +4,7 @@ import { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Package, Truck, Ship, Plane, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,82 +88,92 @@ export default function LogisticsJourney() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="bg-dark relative">
+        <section ref={sectionRef} className="bg-background relative overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 opacity-80">
+                <Image
+                    src="/background.webp"
+                    alt="Background"
+                    fill
+                    className="object-cover"
+                    priority={false}
+                />
+            </div>
             <div ref={triggerRef} className="min-h-screen py-20 flex items-center justify-center">
                 <div className="max-w-7xl w-full px-6 relative">
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-24 text-center">
+                    <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-24 text-center">
                         The Journey of <span className="text-primary">Excellence</span>
                     </h2>
 
                     <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
                         {/* Step 1 */}
                         <div className="step-1 flex flex-col items-center text-center opacity-0 relative">
-                            <div className="order-2 md:order-1 w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-white/20">
-                                <Package className="w-8 h-8 text-white" />
+                            <div className="order-2 md:order-1 w-20 h-20 bg-muted rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-border">
+                                <Package className="w-8 h-8 text-foreground" />
                             </div>
                             <div className="order-1 md:order-2">
-                                <h3 className="text-xl font-bold text-white mb-2">Order Received</h3>
-                                <p className="text-gray-400 text-sm">Instant confirmation and automated processing.</p>
+                                <h3 className="text-xl font-bold text-foreground mb-2">Order Received</h3>
+                                <p className="text-muted-foreground text-sm">Instant confirmation and automated processing.</p>
                             </div>
 
                             {/* Horizontal Line (Desktop) */}
-                            <div className="hidden md:block absolute top-10 left-[calc(50%+40px)] w-full h-1 bg-white/10 -z-10">
+                            <div className="hidden md:block absolute top-10 left-[calc(50%+40px)] w-full h-1 bg-muted -z-10">
                                 <div className="line-1-h h-full bg-primary w-0" />
                             </div>
                             {/* Vertical Line (Mobile) */}
-                            <div className="md:hidden absolute top-[100%] left-1/2 -translate-x-1/2 w-1 h-16 bg-white/10 -z-10">
+                            <div className="md:hidden absolute top-[100%] left-1/2 -translate-x-1/2 w-1 h-16 bg-muted -z-10">
                                 <div className="line-1-v w-full bg-primary h-0" />
                             </div>
                         </div>
 
                         {/* Step 2 */}
                         <div className="step-2 flex flex-col items-center text-center opacity-0 mt-16 md:mt-0 relative">
-                            <div className="order-2 md:order-1 w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-white/20">
-                                <Truck className="w-8 h-8 text-white" />
+                            <div className="order-2 md:order-1 w-20 h-20 bg-muted rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-border">
+                                <Truck className="w-8 h-8 text-foreground" />
                             </div>
                             <div className="order-1 md:order-2">
-                                <h3 className="text-xl font-bold text-white mb-2">Processing</h3>
-                                <p className="text-gray-400 text-sm">Secure packing and route optimization.</p>
+                                <h3 className="text-xl font-bold text-foreground mb-2">Processing</h3>
+                                <p className="text-muted-foreground text-sm">Secure packing and route optimization.</p>
                             </div>
 
                             {/* Horizontal Line (Desktop) */}
-                            <div className="hidden md:block absolute top-10 left-[calc(50%+40px)] w-full h-1 bg-white/10 -z-10">
+                            <div className="hidden md:block absolute top-10 left-[calc(50%+40px)] w-full h-1 bg-muted -z-10">
                                 <div className="line-2-h h-full bg-primary w-0" />
                             </div>
                             {/* Vertical Line (Mobile) */}
-                            <div className="md:hidden absolute top-[100%] left-1/2 -translate-x-1/2 w-1 h-16 bg-white/10 -z-10">
+                            <div className="md:hidden absolute top-[100%] left-1/2 -translate-x-1/2 w-1 h-16 bg-muted -z-10">
                                 <div className="line-2-v w-full bg-primary h-0" />
                             </div>
                         </div>
 
                         {/* Step 3 */}
                         <div className="step-3 flex flex-col items-center text-center opacity-0 mt-16 md:mt-0 relative">
-                            <div className="order-2 md:order-1 w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-white/20">
-                                <Ship className="w-8 h-8 text-white" />
+                            <div className="order-2 md:order-1 w-20 h-20 bg-muted rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-border">
+                                <Ship className="w-8 h-8 text-foreground" />
                             </div>
                             <div className="order-1 md:order-2">
-                                <h3 className="text-xl font-bold text-white mb-2">Global Transit</h3>
-                                <p className="text-gray-400 text-sm">Real-time tracking across land, sea, or air.</p>
+                                <h3 className="text-xl font-bold text-foreground mb-2">Global Transit</h3>
+                                <p className="text-muted-foreground text-sm">Real-time tracking across land, sea, or air.</p>
                             </div>
 
                             {/* Horizontal Line (Desktop) */}
-                            <div className="hidden md:block absolute top-10 left-[calc(50%+40px)] w-full h-1 bg-white/10 -z-10">
+                            <div className="hidden md:block absolute top-10 left-[calc(50%+40px)] w-full h-1 bg-muted -z-10">
                                 <div className="line-3-h h-full bg-primary w-0" />
                             </div>
                             {/* Vertical Line (Mobile) */}
-                            <div className="md:hidden absolute top-[100%] left-1/2 -translate-x-1/2 w-1 h-16 bg-white/10 -z-10">
+                            <div className="md:hidden absolute top-[100%] left-1/2 -translate-x-1/2 w-1 h-16 bg-muted -z-10">
                                 <div className="line-3-v w-full bg-primary h-0" />
                             </div>
                         </div>
 
                         {/* Step 4 */}
                         <div className="step-4 flex flex-col items-center text-center opacity-0 mt-16 md:mt-0 relative">
-                            <div className="order-2 md:order-1 w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-white/20">
-                                <CheckCircle className="w-8 h-8 text-white" />
+                            <div className="order-2 md:order-1 w-20 h-20 bg-muted rounded-full flex items-center justify-center mb-4 md:mb-4 mt-4 md:mt-0 relative z-20 border border-border">
+                                <CheckCircle className="w-8 h-8 text-foreground" />
                             </div>
                             <div className="order-1 md:order-2">
-                                <h3 className="text-xl font-bold text-white mb-2">Delivered</h3>
-                                <p className="text-gray-400 text-sm">On time, every time. Customer satisfaction guaranteed.</p>
+                                <h3 className="text-xl font-bold text-foreground mb-2">Delivered</h3>
+                                <p className="text-muted-foreground text-sm">On time, every time. Customer satisfaction guaranteed.</p>
                             </div>
                         </div>
                     </div>

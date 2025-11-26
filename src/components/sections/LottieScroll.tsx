@@ -4,6 +4,7 @@ import { useRef, useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -274,7 +275,17 @@ export default function LottieScroll() {
     }, [isReady]);
 
     return (
-        <section ref={sectionRef} className="relative bg-black py-12 md:py-20 overflow-hidden min-h-screen flex items-center">
+        <section ref={sectionRef} className="relative bg-background py-12 md:py-20 overflow-hidden min-h-screen flex items-center">
+            {/* Background Image */}
+            <div className="absolute inset-0 opacity-80">
+                <Image
+                    src="/background.webp"
+                    alt="Background"
+                    fill
+                    className="object-cover"
+                    priority={false}
+                />
+            </div>
             <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-12 px-4 md:px-12 max-w-7xl mx-auto w-full">
                 {/* Left Side - Centered Lottie (Always Running) */}
                 <div className="w-full md:w-1/2 flex items-center justify-center z-10 mt-8 md:mt-0">
@@ -294,7 +305,7 @@ export default function LottieScroll() {
                         {contentItems.map((item, index) => (
                             <div
                                 key={index}
-                                className="stack-card absolute top-1/2 -translate-y-1/2 left-0 w-full bg-gradient-to-br from-white/30 to-white/15 backdrop-blur-xl border border-white/30 rounded-2xl p-5 md:p-8 shadow-2xl"
+                                className="stack-card absolute top-1/2 -translate-y-1/2 left-0 w-full bg-card backdrop-blur-xl border border-border rounded-2xl p-5 md:p-8 shadow-2xl"
                                 style={{
                                     transformStyle: "preserve-3d",
                                 }}
@@ -306,11 +317,11 @@ export default function LottieScroll() {
                                         </span>
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <h3 className="stack-title text-xl md:text-3xl font-bold text-white mb-2 md:mb-4">
+                                        <h3 className="stack-title text-xl md:text-3xl font-bold text-foreground mb-2 md:mb-4">
                                             {item.title}
                                         </h3>
                                         <div className="stack-description overflow-hidden">
-                                            <p className="text-sm md:text-lg text-gray-200 leading-relaxed">
+                                            <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </div>
