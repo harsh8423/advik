@@ -71,7 +71,7 @@ export default function Navbar() {
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
-                scrolled || activeMegaMenu ? "bg-background/95 backdrop-blur-md border-b border-border/10" : "bg-transparent"
+                scrolled || activeMegaMenu ? "bg-advik-navy/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
             )}
             onMouseLeave={() => !mobileMenuOpen && setActiveMegaMenu(null)}
         >
@@ -99,7 +99,7 @@ export default function Navbar() {
                                 href={link.href}
                                 className={cn(
                                     "text-sm font-bold uppercase tracking-wide transition-colors flex items-center gap-1",
-                                    activeMegaMenu === link.name ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                                    activeMegaMenu === link.name ? "text-primary" : "text-gray-300 hover:text-white"
                                 )}
                             >
                                 {link.name}
