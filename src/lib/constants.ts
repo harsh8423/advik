@@ -12,6 +12,7 @@ export interface Service {
     icon: any;
     image: string;
     features: string[];
+    href?: string;
 }
 
 export interface Industry {
