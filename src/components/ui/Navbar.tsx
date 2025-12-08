@@ -21,7 +21,7 @@ const services = [
     { name: "Warehousing & Transloading", icon: Box, href: "/warehousing" },
     { name: "Air & Expedited", icon: Plane, href: "#" },
     { name: "Truckload", icon: Truck, href: "#" },
-    { name: "Intermodal", icon: Factory, href: "#" },
+    { name: "Intermodal", icon: Factory, href: "/intermodal" },
     { name: "Flatbed", icon: Truck, href: "#" },
     { name: "Reefer", icon: Leaf, href: "#" },
     { name: "LTL", icon: Truck, href: "#" },
@@ -33,7 +33,7 @@ const industries = [
     { name: "Food & Beverage", icon: Utensils, href: "#" },
     { name: "Produce", icon: Leaf, href: "#" },
     { name: "Renewable Energy", icon: Zap, href: "#" },
-    { name: "Retail", icon: ShoppingBag, href: "#" },
+    { name: "Retail", icon: ShoppingBag, href: "/retail" },
     { name: "Manufacturing", icon: Factory, href: "#" },
     { name: "Building Materials", icon: Hammer, href: "#" },
 ];

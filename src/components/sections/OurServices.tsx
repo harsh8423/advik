@@ -207,7 +207,7 @@ export default function OurServices() {
                                         </p>
 
                                         {/* Browse button */}
-                                        <Link href={service.title === "Drayage" ? "/drayage" : service.title === "Warehousing & Transloading" ? "/warehousing" : "#"} className="group/btn relative flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-muted/50 border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 overflow-hidden">
+                                        <Link href={service.title === "Drayage" ? "/drayage" : service.title === "Warehousing & Transloading" ? "/warehousing" : service.title === "Intermodal" ? "/intermodal" : "#"} className="group/btn relative flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-muted/50 border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 overflow-hidden">
                                             {/* Button glow effect */}
                                             <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
 

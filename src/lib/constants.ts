@@ -22,6 +22,7 @@ export interface Industry {
     solution: string;
     icon: any;
     image: string;
+    href?: string;
 }
 
 export interface Testimonial {
@@ -59,7 +60,8 @@ export const SERVICES: Service[] = [
         fullDescription: 'Combine the best of truck and rail transport to optimize your supply chain. Our intermodal solutions offer a cost-effective and eco-friendly alternative for long-haul shipments.',
         icon: Train,
         image: 'https://europaproperty.com/wp-content/uploads/2020/09/1200-550-1.jpg',
-        features: ['Cost Savings', 'Eco-Friendly', 'Rail & Road Integration', 'Large Volume Capacity']
+        features: ['Cost Savings', 'Eco-Friendly', 'Rail & Road Integration', 'Large Volume Capacity'],
+        href: '/intermodal'
     },
     {
         id: 'ftl-ltl',
@@ -125,7 +127,8 @@ export const INDUSTRIES: Industry[] = [
         challenges: 'Seasonal spikes, omnichannel distribution, and fast-changing consumer demands.',
         solution: 'Flexible warehousing and distribution networks that scale with your seasonal needs.',
         icon: ShoppingCart,
-        image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1470&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1470&auto=format&fit=crop',
+        href: '/retail'
     },
     {
         id: 'food-beverage',

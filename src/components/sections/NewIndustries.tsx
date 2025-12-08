@@ -50,7 +50,7 @@ export default function NewIndustries() {
                             key={industry.id}
                             whileHover={{ scale: 0.98 }}
                             className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer bg-advik-navy shadow-xl"
-                            onClick={() => router.push(`/industries/${industry.id}`)}
+                            onClick={() => router.push(industry.href || `/industries/${industry.id}`)}
                         >
                             <img src={industry.image} className="w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700" alt={industry.title} />
                             <div className="absolute inset-0 bg-advik-navy/30"></div>
