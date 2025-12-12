@@ -101,15 +101,8 @@ export default function OurServices() {
             });
         }, sectionRef);
 
-        const handleResize = () => {
-            ScrollTrigger.refresh();
-        };
-
-        window.addEventListener("resize", handleResize);
-
         return () => {
             ctx.revert();
-            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
