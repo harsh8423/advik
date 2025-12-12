@@ -1,23 +1,45 @@
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/sections/Footer";
-import DrayageHero from "@/components/sections/DrayageHero";
-import DrayageCubeSection from "@/components/sections/DrayageCubeSection";
-import DrayageBenefits from "@/components/sections/DrayageBenefits";
-import DrayageIndustries from "@/components/sections/DrayageIndustries";
-import DrayageWhyChoose from "@/components/sections/DrayageWhyChoose";
-import DrayageCommitment from "@/components/sections/DrayageCommitment";
-
+import GenericHero from "@/components/sections/common/GenericHero";
+import GenericIntro from "@/components/sections/common/GenericIntro";
+import GenericFeatures from "@/components/sections/common/GenericFeatures";
+import GenericWhyChoose from "@/components/sections/common/GenericWhyChoose";
+import GenericCTA from "@/components/sections/common/GenericCTA";
+import { services } from "@/data/services";
 
 export default function Drayage() {
+    const data = services.drayage;
+
     return (
-        <main className="bg-dark min-h-screen text-light selection:bg-primary selection:text-white">
+        <main className="bg-white min-h-screen text-advik-navy selection:bg-advik-red selection:text-white">
             <Navbar />
-            <DrayageHero />
-            <DrayageCubeSection />
-            <DrayageBenefits />
-            <DrayageIndustries />
-            <DrayageWhyChoose />
-            <DrayageCommitment />
+            <GenericHero
+                title={data.title}
+                subtitle="Services"
+                image={data.heroImage}
+                description={data.heroDesc}
+            />
+            <GenericIntro
+                title={data.introTitle}
+                description={data.introDesc}
+                image={data.introImage}
+            />
+            <GenericFeatures
+                services={data.features.services}
+                whenToChoose={data.features.whenToChoose}
+                benefits={data.features.benefits}
+            />
+            <GenericWhyChoose
+                title={data.whyChoose.title}
+                description={data.whyChoose.desc}
+                reasons={data.whyChoose.reasons}
+                ctaTitle={data.whyChoose.ctaTitle}
+                ctaDesc={data.whyChoose.ctaDesc}
+            />
+            <GenericCTA
+                title={data.ctaTitle}
+                description={data.ctaDesc}
+            />
             <Footer />
         </main>
     );

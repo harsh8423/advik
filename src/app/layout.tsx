@@ -25,8 +25,8 @@ export default function RootLayout({
             <body className={clsx(inter.variable, "font-sans bg-background text-foreground")}>
                 <ThemeProvider
                     attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
+                    defaultTheme="light"
+                    forcedTheme="light"
                     disableTransitionOnChange
                 >
                     <SmoothScroll>

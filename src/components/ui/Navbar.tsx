@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Truck, Factory, Leaf, ShoppingBag, Hammer, Zap, Utensils, Ship, Plane, Box, ArrowUpRight, Map } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+
 
 const navLinks = [
     { name: "Services", href: "#services", hasMegaMenu: true },
@@ -18,24 +18,24 @@ const navLinks = [
 
 const services = [
     { name: "Drayage", icon: Ship, href: "/drayage" },
-    { name: "Warehousing & Transloading", icon: Box, href: "/warehousing" },
-    { name: "Air & Expedited", icon: Plane, href: "#" },
-    { name: "Truckload", icon: Truck, href: "#" },
+    { name: "OTR (Over-The-Road)", icon: Truck, href: "/otr" },
     { name: "Intermodal", icon: Factory, href: "/intermodal" },
-    { name: "Flatbed", icon: Truck, href: "#" },
-    { name: "Reefer", icon: Leaf, href: "#" },
-    { name: "LTL", icon: Truck, href: "#" },
-    { name: "Cross Border", icon: Map, href: "#" },
+    { name: "FTL- LTL (Truckload)", icon: Truck, href: "/ftl-ltl" },
+    { name: "Warehousing & Transloading", icon: Box, href: "/warehousing" },
+    { name: "Reefer", icon: Leaf, href: "/reefer" },
+    { name: "Flatbed", icon: Truck, href: "/flatbed" },
+    { name: "Power-Only", icon: Truck, href: "/power-only" },
 ];
 
 const industries = [
-    { name: "Automotive", icon: Truck, href: "#" },
-    { name: "Food & Beverage", icon: Utensils, href: "#" },
-    { name: "Produce", icon: Leaf, href: "#" },
-    { name: "Renewable Energy", icon: Zap, href: "#" },
+    { name: "Automotive", icon: Truck, href: "/automotive" },
     { name: "Retail", icon: ShoppingBag, href: "/retail" },
-    { name: "Manufacturing", icon: Factory, href: "#" },
-    { name: "Building Materials", icon: Hammer, href: "#" },
+    { name: "Food & Beverage", icon: Utensils, href: "/food-beverage" },
+    { name: "Manufacturing", icon: Factory, href: "/manufacturing" },
+    { name: "Produce", icon: Leaf, href: "/produce" },
+    { name: "Building Materials", icon: Hammer, href: "/building-materials" },
+    { name: "Renewable Energy", icon: Zap, href: "/renewable-energy" },
+    { name: "Electronics", icon: Zap, href: "/electronics" },
 ];
 
 export default function Navbar() {
@@ -111,17 +111,15 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* CTA Button & Theme Toggle */}
+                {/* CTA Button */}
                 <div className="hidden lg:flex items-center gap-4">
-                    <ThemeToggle />
-                    <button className="px-6 py-3 bg-primary text-primary-foreground text-sm font-bold rounded-md hover:bg-red-700 transition-colors shadow-lg shadow-primary/20">
+                    <Link href="/contact" className="px-6 py-3 bg-primary text-primary-foreground text-sm font-bold rounded-md hover:bg-red-700 transition-colors shadow-lg shadow-primary/20">
                         Contact Us
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Toggle */}
                 <div className="lg:hidden flex items-center gap-4">
-                    <ThemeToggle />
                     <button
                         className="text-foreground"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -225,9 +223,9 @@ export default function Navbar() {
                                 )}
                             </div>
                         ))}
-                        <button className="w-full py-3 bg-primary text-primary-foreground font-bold rounded-lg mt-4">
+                        <Link href="/contact" className="w-full py-3 bg-primary text-primary-foreground font-bold rounded-lg mt-4 text-center block">
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
             )}

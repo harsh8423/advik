@@ -6,8 +6,8 @@ import GenericServicesGrid from "@/components/sections/common/GenericServicesGri
 import GenericCTA from "@/components/sections/common/GenericCTA";
 import { industries } from "@/data/industries";
 
-export default function Retail() {
-    const data = industries.retail;
+export default function BuildingMaterials() {
+    const data = industries["building-materials"];
 
     return (
         <main className="bg-white min-h-screen text-advik-navy selection:bg-advik-red selection:text-white">

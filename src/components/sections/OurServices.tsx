@@ -17,31 +17,37 @@ const services = [
         image: "/images/port-7370411_1280.jpg",
         title: "Drayage",
         description: "Efficient port-to-warehouse drayage services ensuring timely cargo movement every shipment.",
+        href: "/drayage"
     },
     {
         image: "/images/peterbilt-2650184_1920.jpg",
         title: "OTR (Over-The-Road)",
         description: "Reliable over-the-road trucking delivering freight safely, efficiently, and always on schedule.",
+        href: "/otr"
     },
     {
         image: "/images/MSC-Seva-in-the-Port-of-Long-Beach.jpg",
         title: "Intermodal",
         description: "Seamless truck and rail intermodal transport reducing shipping costs while enhancing reliability.",
+        href: "/intermodal"
     },
     {
         image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         title: "FTL – LTL (Truckload)",
         description: "Flexible truckload and less-than-truckload shipping tailored to specific business needs.",
+        href: "/ftl-ltl"
     },
     {
         image: "/images/5f3dd70103bf69f2f89f6329_reefer-1.jpg",
         title: "Reefer",
         description: "Temperature-controlled reefer transport preserving perishable goods during storage.",
+        href: "/reefer"
     },
     {
         image: "/images/8407e3d0da86098b3d9c728a51102097.jpg",
         title: "Warehousing & Transloading",
         description: "Secure storage solutions with inventory management and timely dispatch for all your goods.",
+        href: "/warehousing"
     },
 ];
 
@@ -207,7 +213,7 @@ export default function OurServices() {
                                         </p>
 
                                         {/* Browse button */}
-                                        <Link href={service.title === "Drayage" ? "/drayage" : service.title === "Warehousing & Transloading" ? "/warehousing" : service.title === "Intermodal" ? "/intermodal" : "#"} className="group/btn relative flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-muted/50 border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 overflow-hidden">
+                                        <Link href={service.href} className="group/btn relative flex items-center gap-2 w-full px-4 py-3 rounded-xl bg-muted/50 border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 overflow-hidden">
                                             {/* Button glow effect */}
                                             <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
 

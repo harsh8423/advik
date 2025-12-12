@@ -56,8 +56,21 @@ export default function Footer() {
                     <div className="lg:col-span-2">
                         <h4 className="text-white font-bold mb-6">Ship With Us</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            {["Drayage", "Warehousing & Transloading", "Air & Expedited", "Truckload", "Intermodal", "Flatbed", "Reefer", "LTL", "Cross Border"].map((item) => (
-                                <li key={item} className="hover:text-primary cursor-pointer transition-colors">{item}</li>
+                            {[
+                                { name: "Drayage", href: "/drayage" },
+                                { name: "FTL & LTL", href: "/ftl-ltl" },
+                                { name: "Flatbed", href: "/flatbed" },
+                                { name: "Intermodal", href: "/intermodal" },
+                                { name: "OTR", href: "/otr" },
+                                { name: "Power-Only", href: "/power-only" },
+                                { name: "Reefer", href: "/reefer" },
+                                { name: "Warehousing", href: "/warehousing" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="hover:text-primary cursor-pointer transition-colors">
+                                        {item.name}
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
@@ -66,8 +79,21 @@ export default function Footer() {
                     <div className="lg:col-span-2">
                         <h4 className="text-white font-bold mb-6">Industries</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            {["Automotive", "Food & Beverage", "Produce", "Renewable Energy", "Retail", "Manufacturing", "Building Materials"].map((item) => (
-                                <li key={item} className="hover:text-primary cursor-pointer transition-colors">{item}</li>
+                            {[
+                                { name: "Automotive", href: "/automotive" },
+                                { name: "Retail", href: "/retail" },
+                                { name: "Food & Beverage", href: "/food-beverage" },
+                                { name: "Manufacturing", href: "/manufacturing" },
+                                { name: "Produce", href: "/produce" },
+                                { name: "Building Materials", href: "/building-materials" },
+                                { name: "Renewable Energy", href: "/renewable-energy" },
+                                { name: "Electronics", href: "/electronics" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="hover:text-primary cursor-pointer transition-colors">
+                                        {item.name}
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                     </div>

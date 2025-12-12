@@ -4,7 +4,7 @@ import Hero from "@/components/sections/Hero";
 import OurServices from "@/components/sections/OurServices";
 import Testimonials from "@/components/sections/Testimonials";
 
-import JoinNetwork from "@/components/sections/JoinNetwork";
+import ShipWithUsCTA from "@/components/sections/ShipWithUsCTA";
 
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
@@ -12,7 +12,7 @@ import NetworkCoverage from "@/components/sections/NetworkCoverage";
 import NewGallery from "@/components/sections/NewGallery";
 
 import ProcessWorkflow from "@/components/sections/ProcessWorkflow";
-import NewIndustries from "@/components/sections/NewIndustries";
+
 
 
 
@@ -25,10 +25,10 @@ export default function Home() {
             <NetworkCoverage />
             <OurServices />
             <ProcessWorkflow />
-            <NewIndustries />
+
             <NewGallery />
             <Testimonials />
-            <JoinNetwork />
+            <ShipWithUsCTA />
             <FAQ />
             <Footer />
         </main>

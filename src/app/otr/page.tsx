@@ -7,15 +7,15 @@ import GenericWhyChoose from "@/components/sections/common/GenericWhyChoose";
 import GenericCTA from "@/components/sections/common/GenericCTA";
 import { services } from "@/data/services";
 
-export default function Warehousing() {
-    const data = services.warehousing;
+export default function OTR() {
+    const data = services.otr;
 
     return (
         <main className="bg-white min-h-screen text-advik-navy selection:bg-advik-red selection:text-white">
             <Navbar />
             <GenericHero
                 title={data.title}
-                subtitle="Transloading"
+                subtitle="Freight"
                 image={data.heroImage}
                 description={data.heroDesc}
             />
