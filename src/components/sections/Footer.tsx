@@ -112,8 +112,8 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#resources" className="text-white font-bold hover:text-primary transition-colors cursor-pointer">
-                                    Resource Hub
+                                <Link href="/blog" className="text-white font-bold hover:text-primary transition-colors cursor-pointer">
+                                    Blogs
                                 </Link>
                             </li>
                         </ul>

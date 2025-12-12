@@ -13,7 +13,7 @@ const navLinks = [
     { name: "Industries", href: "#industries", hasMegaMenu: true },
     { name: "Carriers", href: "#carriers" },
     { name: "About Us", href: "/about" },
-    { name: "Resource Hub", href: "#resources" },
+    { name: "Blogs", href: "/blog" },
 ];
 
 const services = [
