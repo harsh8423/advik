@@ -11,7 +11,7 @@ import { Menu, X, ChevronDown, Truck, Factory, Leaf, ShoppingBag, Hammer, Zap, U
 const navLinks = [
     { name: "Services", href: "#services", hasMegaMenu: true },
     { name: "Industries", href: "#industries", hasMegaMenu: true },
-    { name: "Carriers", href: "#carriers" },
+    { name: "Carriers", href: "/carriers" },
     { name: "About Us", href: "/about" },
     { name: "Blogs", href: "/blog" },
 ];
@@ -82,7 +82,10 @@ export default function Navbar() {
                         src="/logo.png"
                         alt="Advik Inc"
                         fill
-                        className="object-contain"
+                        className={cn(
+                            "object-contain transition-all duration-300",
+                            scrolled || activeMegaMenu ? "" : "brightness-0 invert"
+                        )}
                         priority
                     />
                 </Link>
