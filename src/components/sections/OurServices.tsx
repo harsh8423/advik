@@ -16,37 +16,37 @@ const services = [
     {
         image: "/images/port-7370411_1280.jpg",
         title: "Drayage",
-        description: "Efficient port-to-warehouse drayage services ensuring timely cargo movement every shipment.",
+        description: "Seamless port-to-warehouse container transport with real-time tracking and reliable capacity.",
         href: "/drayage"
     },
     {
         image: "/images/peterbilt-2650184_1920.jpg",
         title: "OTR (Over-The-Road)",
-        description: "Reliable over-the-road trucking delivering freight safely, efficiently, and always on schedule.",
+        description: "Move over-the-road shipments with flexibility and efficiency through our extensive carrier network.",
         href: "/otr"
     },
     {
         image: "/images/MSC-Seva-in-the-Port-of-Long-Beach.jpg",
         title: "Intermodal",
-        description: "Seamless truck and rail intermodal transport reducing shipping costs while enhancing reliability.",
+        description: "Cost-effective and sustainable solutions from a leading intermodal provider in North America.",
         href: "/intermodal"
     },
     {
         image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         title: "FTL – LTL (Truckload)",
-        description: "Flexible truckload and less-than-truckload shipping tailored to specific business needs.",
+        description: "Nationwide reach, performance visibility, and streamlined shipments for full and partial loads.",
         href: "/ftl-ltl"
     },
     {
         image: "/images/5f3dd70103bf69f2f89f6329_reefer-1.jpg",
         title: "Reefer",
-        description: "Temperature-controlled reefer transport preserving perishable goods during storage.",
+        description: "Temperature-controlled transport with continuous monitoring for perishable and sensitive cargo.",
         href: "/reefer"
     },
     {
         image: "/images/8407e3d0da86098b3d9c728a51102097.jpg",
         title: "Warehousing & Transloading",
-        description: "Secure storage solutions with inventory management and timely dispatch for all your goods.",
+        description: "Custom supply chain solutions with inventory management and day-to-day operations handled for you.",
         href: "/warehousing"
     },
 ];

@@ -7,24 +7,24 @@ import { useState, useEffect } from "react";
 
 const carouselData = [
     {
-        subtitle: "Not Only Loads.",
-        title: "Excellence In Freight Management",
-        description: "Our team ensures your shipments reach safely and on time with advanced technology, efficient tracking, and tailored logistics support across all transport modes.",
+        subtitle: "Driven for Excellence",
+        title: "Technology That Empowers",
+        description: "Change the way you do business with our advanced logistics platform. We eliminate inefficiencies by creating one place to manage every step of your transportation process.",
     },
     {
-        subtitle: "Your Trusted Partner",
-        title: "Global Logistics Partner",
-        description: "At Advik Freight, we deliver reliable and cost-effective freight solutions across the globe — from Full Truckload (FTL) and Less Than Truckload (LTL) to Intermodal, Air, and Ocean services.",
+        subtitle: "Capacity to Deliver",
+        title: "Multimodal Solutions",
+        description: "Make shipping your freight simple with our transportation expertise. Get customized solutions across Intermodal, Truckload, LTL, Dedicated, and Final Mile services.",
     },
     {
-        subtitle: "Quality & Precision",
-        title: "Precision In Every Shipment",
-        description: "Our team ensures your shipments reach safely and on time with advanced technology, efficient tracking, and tailored logistics support across all transport modes.",
+        subtitle: "People You Trust",
+        title: "Your Reliable Partner",
+        description: "Our people set us apart. With experienced professionals and a commitment to operational excellence, we deliver best-in-class safety and service for every shipment.",
     },
     {
-        subtitle: "Worldwide Excellence",
-        title: "Global Reach, Local Expertise",
-        description: "Our team ensures your shipments reach safely and on time with advanced technology, efficient tracking, and tailored logistics support across all transport modes.",
+        subtitle: "The Advik Difference",
+        title: "Real-Time Visibility",
+        description: "Technology in transportation means real-time visibility. We take time to understand your business, your pain points, and deliver tailored solutions that meet your needs.",
     },
 ];
 

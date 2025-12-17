@@ -77,7 +77,7 @@ export default function BlogGrid({ blogs }: BlogGridProps) {
                                 {/* Read More Link */}
                                 <div className="mt-auto pt-6 border-t border-border/50">
                                     <Link
-                                        href={`#`}
+                                        href={`/blog/${blog.slug}`}
                                         className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors group/link"
                                     >
                                         Read Full Article

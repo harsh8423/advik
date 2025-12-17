@@ -12,12 +12,12 @@ import {
 } from 'lucide-react';
 
 const STEPS = [
-    { id: '01', title: 'Consultation', desc: 'Requirements analysis.', icon: MessageSquareText },
-    { id: '02', title: 'Planning', desc: 'AI route optimization.', icon: Cpu },
-    { id: '03', title: 'Handling', desc: 'Secure packaging.', icon: Box },
-    { id: '04', title: 'Transport', desc: 'Multi-modal transit.', icon: Truck },
-    { id: '05', title: 'Tracking', desc: 'Real-time updates.', icon: ScanSearch },
-    { id: '06', title: 'Delivery', desc: 'Final mile success.', icon: MapPin },
+    { id: '01', title: 'Connect', desc: 'Submit your shipment needs.', icon: MessageSquareText },
+    { id: '02', title: 'Optimize', desc: 'AI-powered route planning.', icon: Cpu },
+    { id: '03', title: 'Prepare', desc: 'Secure loading & handling.', icon: Box },
+    { id: '04', title: 'Move', desc: 'Multimodal transportation.', icon: Truck },
+    { id: '05', title: 'Monitor', desc: 'Real-time visibility.', icon: ScanSearch },
+    { id: '06', title: 'Deliver', desc: 'On-time, every time.', icon: MapPin },
 ];
 
 const Workflow: React.FC = () => {

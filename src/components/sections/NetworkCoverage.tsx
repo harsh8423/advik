@@ -35,10 +35,10 @@ export default function NetworkCoverage() {
                         className="bg-advik-navy/80 backdrop-blur-md p-8 border-l-4 border-advik-red"
                     >
                         <h2 className="text-advik-red font-bold tracking-widest uppercase mb-2">Network Coverage</h2>
-                        <h3 className="text-5xl font-display font-bold text-white mb-6">NATIONWIDE &<br />GLOBAL REACH</h3>
+                        <h3 className="text-5xl font-display font-bold text-white mb-6">NORTH AMERICA&apos;S<br />LEADING NETWORK</h3>
                         <p className="text-gray-300 mb-8 leading-relaxed">
-                            From coast-to-coast in the USA to major international hubs, our network is always active.
-                            Visualize your supply chain in real-time with our advanced tracking systems.
+                            Creating the most efficient transportation network in North America.
+                            Real-time visibility, 24/7 dispatch, and seamless connectivity across all major hubs.
                         </p>
 
                         <div className="grid grid-cols-2 gap-6 mb-8">

@@ -5,24 +5,24 @@ import { ChevronDown, HelpCircle, Zap } from "lucide-react";
 
 const faqs = [
     {
-        question: "What logistics services does Advik Freight offer?",
-        answer: "Advik Freight offers a comprehensive range of logistics services including Drayage (port-to-warehouse transportation), Over-The-Road (OTR) trucking, Intermodal transport, Full Truckload (FTL) and Less-Than-Truckload (LTL) shipping, Temperature-controlled Reefer transport, and Warehousing & Transloading solutions. We tailor our services to meet your specific business needs."
+        question: "What transportation services does Advik Freight offer?",
+        answer: "We offer comprehensive multimodal solutions including Intermodal, Full Truckload (FTL), Less-Than-Truckload (LTL), Dedicated Contract Services, Flatbed, Reefer, Drayage, Power-Only, and Warehousing. Our mode-neutral approach means we match your freight with the right solution for cost, speed, and reliability."
     },
     {
-        question: "How can I get started with your services?",
-        answer: "Getting started is easy! Simply contact our team through our website, email, or phone. Our logistics experts will discuss your shipping requirements, provide a customized quote, and guide you through the onboarding process. We'll work with you to create a logistics solution that fits your budget and timeline."
+        question: "How does your technology platform provide visibility?",
+        answer: "Our advanced logistics platform provides real-time tracking and visibility at every step of the transportation process. You can monitor shipment status, receive proactive updates, access performance analytics, and manage all your freight from a single dashboard—eliminating inefficiencies in your supply chain."
     },
     {
-        question: "Do you handle international and domestic shipments?",
-        answer: "Yes, we handle both international and domestic shipments. Our extensive network and partnerships allow us to provide seamless logistics solutions across borders and within the country. Whether you're shipping locally or globally, we have the expertise and infrastructure to ensure your cargo arrives safely and on time."
+        question: "What's the difference between FTL and LTL shipping?",
+        answer: "Full Truckload (FTL) gives you exclusive use of a trailer—ideal for large shipments (10+ pallets) or high-value cargo requiring faster, direct delivery. Less-Than-Truckload (LTL) consolidates your freight with other shipments, making it cost-effective for smaller loads (1-6 pallets) with flexible scheduling."
     },
     {
-        question: "What makes Advik Freight different from other logistics providers?",
-        answer: "Advik Freight stands out through our commitment to reliability, advanced technology integration, 24/7 customer support, and personalized service. We combine modern tracking systems with experienced logistics professionals to deliver optimal solutions. Our focus on safety, efficiency, and transparency ensures your cargo is in the best hands every step of the way."
+        question: "How do you customize solutions for my business?",
+        answer: "We take time to understand your business, your pain points, and your unique requirements. Our team designs tailored transportation strategies—whether you need dedicated fleet services, managed logistics, or multimodal solutions—to optimize your supply chain and reduce overall freight expenses."
     },
     {
-        question: "How long does shipping usually take?",
-        answer: "Shipping times vary depending on the service type, origin, and destination. Drayage services typically take 1-2 days, OTR shipments range from 2-5 days for cross-country routes, while local deliveries can be completed within 24 hours. We provide accurate time estimates during booking and offer real-time tracking so you always know where your shipment is."
+        question: "What industries do you serve?",
+        answer: "We serve diverse industries including Manufacturing, Retail & E-Commerce, Food & Beverage, Pharmaceuticals, Automotive, Construction, Renewable Energy, and more. Our experienced team understands industry-specific requirements for temperature control, specialized handling, compliance, and time-sensitive deliveries."
     }
 ];
 

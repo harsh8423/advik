@@ -32,12 +32,12 @@ export default function ShipWithUsCTA() {
 
                     {/* Title */}
                     <h2 className="text-5xl md:text-6xl font-black text-advik-navy mb-6 tracking-tight">
-                        Ship with Us
+                        Let&apos;s Connect
                     </h2>
 
                     {/* Subtitle */}
                     <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl">
-                        Start shipping with reliability, visibility, and industry expertise.
+                        Get an instant quote and experience the difference of technology-driven logistics.
                     </p>
 
                     {/* Button */}

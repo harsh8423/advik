@@ -5,31 +5,31 @@ import { Quote, Star, MessageSquare, User } from "lucide-react";
 
 const testimonials = [
     {
-        quote: "Advik Freight Logistics has completely transformed our supply chain efficiency. Their team is proactive, reliable, and always delivers on time.",
+        quote: "Technology in the transportation space means real-time visibility, and Advik's platform does a very nice job of providing that for us.",
         author: "Sarah Johnson",
         role: "Logistics Manager, TechGlobal",
         rating: 5
     },
     {
-        quote: "The best freight partner we've worked with. Their attention to detail and customer service is unmatched in the industry.",
+        quote: "Advik takes the time up front to really get to know our business and our pain points, then customizes a tailored solution to meet those needs.",
         author: "Michael Chen",
         role: "Operations Director, FreshFoods",
         rating: 5
     },
     {
-        quote: "Reliable, transparent, and cost-effective. Advik's technology platform gives us the visibility we need for our shipments.",
+        quote: "Their multimodal approach has significantly reduced our transportation costs while maintaining the reliability our customers expect.",
         author: "David Smith",
         role: "Supply Chain VP, BuildRight",
         rating: 5
     },
     {
-        quote: "Outstanding service! They handled our complex heavy haul requirements with ease. Highly recommended for specialized transport.",
+        quote: "Best-in-class safety and route optimization. They've transformed our dedicated fleet operations with their expertise.",
         author: "Emily Davis",
         role: "Project Manager, ConstructCo",
         rating: 5
     },
     {
-        quote: "We appreciate their dedication to safety and timely deliveries. A true partner in our logistics success.",
+        quote: "From first mile to final mile, they've got us covered. The visibility into our shipments has been a game changer for our business.",
         author: "Robert Wilson",
         role: "Fleet Manager, AutoParts Inc.",
         rating: 5

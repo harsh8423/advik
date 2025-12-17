@@ -2,391 +2,391 @@ export const services = {
     "drayage": {
         title: "Drayage",
         heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Reliable short-distance transport for your supply chain. Streamline cargo movement between ports, rail terminals, and warehouses.",
+        heroDesc: "Seamless container transport between ports, rail terminals, and warehouses. Real-time visibility and reliable capacity when you need it.",
         introTitle: "Drayage Services",
         introDesc: [
-            "Advik Freight provides reliable Drayage Services for businesses that require the efficient movement of containers and cargo over short distances, typically between ports, rail terminals, warehouses, and distribution centers. Our drayage solutions are designed to streamline your supply chain, reduce congestion, and ensure timely cargo transfers.",
-            "With extensive experience, a network of trusted carriers, and advanced logistics technology, we handle every drayage operation with precision, safety, and efficiency. Whether you’re dealing with imports, exports, or intermodal transfers, Advik Freight ensures smooth cargo movement from origin to destination."
+            "Our drayage services provide the critical first and last mile connection for your intermodal shipments. We specialize in moving containers efficiently between ports, rail terminals, and distribution centers with the visibility and reliability your supply chain demands.",
+            "With a network of vetted drayage carriers and advanced tracking technology, we ensure your containers move on schedule. Whether you're managing imports, exports, or transload operations, we coordinate pickups, deliveries, and chassis management seamlessly."
         ],
         introImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Port-to-Warehouse", desc: "Efficient movement between seaports and storage." },
-                { title: "Rail Terminal Services", desc: "Handling intermodal containers." },
-                { title: "Container Handling", desc: "Safe loading, unloading, and repositioning." },
-                { title: "Short-Haul Delivery", desc: "Quick, reliable services over short distances." },
-                { title: "Real-Time Tracking", desc: "Monitor container locations and status." }
+                { title: "Port Drayage", desc: "Container pickup and delivery at major ports." },
+                { title: "Rail Terminal Drayage", desc: "Intermodal connections at rail facilities." },
+                { title: "Transload Services", desc: "Container-to-warehouse cargo transfers." },
+                { title: "Chassis Management", desc: "Pool chassis or private fleet coordination." },
+                { title: "Real-Time Tracking", desc: "Visibility from port gate to delivery." }
             ],
             whenToChoose: [
-                "Transporting containers from ports to warehouses or rail terminals.",
-                "Short-distance, time-sensitive cargo transfers.",
-                "Moving import or export cargo for intermodal logistics.",
-                "Reducing bottlenecks at ports and distribution centers."
+                "Import containers arriving at port.",
+                "Export containers requiring port delivery.",
+                "Rail-to-warehouse container movements.",
+                "Transload operations for distribution.",
+                "Time-sensitive port cargo pickup."
             ],
             benefits: [
-                { title: "Efficient Cargo Movement", desc: "Minimizes delays at ports and terminals." },
-                { title: "Cost Savings", desc: "Optimized short-distance transportation." },
-                { title: "Enhanced Security", desc: "Handled by trained personnel." },
-                { title: "Flexible Scheduling", desc: "Coordinated pickup and delivery times." },
-                { title: "Improved Reliability", desc: "Smooth coordination between transport modes." }
+                { title: "Port Expertise", desc: "Navigate port operations and avoid delays." },
+                { title: "Capacity Access", desc: "Reliable carriers even in peak seasons." },
+                { title: "Demurrage Reduction", desc: "Timely pickups to minimize detention fees." },
+                { title: "Full Visibility", desc: "Track containers from gate in to delivery." },
+                { title: "Flexible Scheduling", desc: "Adapt to changing vessel arrivals and needs." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "We understand the critical role drayage plays in the global supply chain. Our commitment to punctuality, safety, and communication ensures your cargo moves seamlessly between transport modes.",
+            desc: "Drayage is a critical link in your supply chain. We provide the capacity, visibility, and expertise to ensure your containers move efficiently from port to destination.",
             reasons: [
-                { icon: "TrendingUp", title: "Experienced Drivers", desc: "Skilled professionals trained in container handling and safety protocols." },
-                { icon: "Clock", title: "Reliable Equipment", desc: "Modern trucks and trailers for efficient short-distance transport." },
-                { icon: "Monitor", title: "Advanced Logistics Technology", desc: "Real-time tracking and optimized routing for timely delivery." },
-                { icon: "ShieldCheck", title: "Compliance & Safety", desc: "Adherence to port and transportation regulations for secure cargo handling." },
-                { icon: "Headset", title: "Dedicated Support", desc: "End-to-end service and assistance for all drayage operations." }
+                { icon: "TrendingUp", title: "Port Relationships", desc: "Strong connections at major ports and terminals." },
+                { icon: "Clock", title: "On-Time Performance", desc: "Reliable pickups that reduce demurrage costs." },
+                { icon: "Monitor", title: "Real-Time Visibility", desc: "Track your containers from gate to gate." },
+                { icon: "ShieldCheck", title: "Compliance Focus", desc: "Proper handling and documentation every time." },
+                { icon: "Headset", title: "Dedicated Support", desc: "Team available when you need answers." }
             ],
             ctaTitle: "Partner with Advik Freight for Drayage Solutions",
-            ctaDesc: "Optimize your port and rail logistics with our reliable drayage services. Contact us today for a quote."
+            ctaDesc: "Keep your containers moving with reliable drayage services."
         },
-        ctaTitle: "Ready to Streamline Your Port Logistics?",
-        ctaDesc: "Contact us today to discuss your drayage needs."
+        ctaTitle: "Need Drayage Services?",
+        ctaDesc: "Get a quote for port or rail drayage today."
     },
     "ftl-ltl": {
         title: "FTL & LTL",
         heroImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Comprehensive Full Truckload (FTL) and Less-Than-Truckload (LTL) solutions. Flexible, cost-effective, and reliable transport for shipments of all sizes.",
-        introTitle: "FTL & LTL Services",
+        heroDesc: "Move over-the-road shipments with flexibility and efficiency. Full truckload capacity and nationwide LTL access for every shipment size.",
+        introTitle: "Truckload & LTL Services",
         introDesc: [
-            "Advik Freight offers comprehensive Full Truckload (FTL) and Less-Than-Truckload (LTL) shipping services tailored to meet your specific cargo needs. Whether you have a large shipment requiring an entire truck or a smaller load that can share space, we provide flexible, cost-effective, and reliable transportation solutions.",
-            "Our extensive network of carriers and advanced logistics platform ensures that your freight is matched with the right equipment and route, guaranteeing on-time delivery and optimal handling. From local deliveries to cross-country hauls, we manage your FTL and LTL shipments with the utmost care and professionalism."
+            "Advik Freight provides comprehensive Full Truckload (FTL) and Less-Than-Truckload (LTL) shipping services designed to give you flexibility and efficiency. Whether you need exclusive trailer capacity for large shipments or cost-effective consolidation for smaller loads, we deliver solutions that make sense for your business.",
+            "Our advanced logistics platform matches your freight with the right equipment and route, providing real-time visibility, performance tracking, and streamlined shipment management. From local deliveries to coast-to-coast hauls, we handle every shipment with precision and professionalism."
         ],
         introImage: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Full Truckload (FTL)", desc: "Exclusive use of trailer for large shipments." },
-                { title: "Less-Than-Truckload (LTL)", desc: "Cost-effective sharing for smaller loads." },
-                { title: "Expedited Shipping", desc: "Faster transit times for urgent cargo." },
-                { title: "Temperature Controlled", desc: "Reefer options for sensitive goods." },
-                { title: "Dry Van Services", desc: "Standard enclosed trailers for general freight." }
+                { title: "Full Truckload (FTL)", desc: "Exclusive trailer for direct, fast delivery." },
+                { title: "Less-Than-Truckload (LTL)", desc: "Cost-effective consolidation for smaller loads." },
+                { title: "Drop-and-Hook", desc: "Efficient trailer swaps for reduced wait times." },
+                { title: "Expedited Services", desc: "Time-critical delivery when you need it most." },
+                { title: "Temperature Control", desc: "Reefer options for sensitive shipments." }
             ],
             whenToChoose: [
-                "FTL: Large shipments (10+ pallets) or high-value/sensitive cargo.",
-                "LTL: Smaller shipments (1-6 pallets) to save costs.",
-                "FTL: Faster delivery with direct routes.",
-                "LTL: Flexible shipping schedules with consolidated loads."
+                "FTL: Large shipments (10+ pallets) or time-sensitive cargo.",
+                "FTL: High-value goods requiring dedicated capacity.",
+                "LTL: Smaller shipments (1-6 pallets) with budget focus.",
+                "LTL: Flexible scheduling with consolidated loads."
             ],
             benefits: [
-                { title: "Cost Efficiency", desc: "Pay only for space used (LTL) or bulk rates (FTL)." },
-                { title: "Flexibility", desc: "Options for every shipment size and urgency." },
-                { title: "Reduced Risk", desc: "Dedicated FTL transport minimizes handling." },
-                { title: "Nationwide Coverage", desc: "Service across all major routes and regions." },
-                { title: "Real-Time Visibility", desc: "Track your shipment from pickup to delivery." }
+                { title: "Nationwide Reach", desc: "Access to carriers across all major lanes." },
+                { title: "Performance Visibility", desc: "Track shipments and measure carrier performance." },
+                { title: "Cost Optimization", desc: "Right-sized solutions for every shipment." },
+                { title: "Reduced Transit Times", desc: "Optimized routing for faster delivery." },
+                { title: "Streamlined Process", desc: "Single platform for all truckload needs." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "We simplify the complexities of FTL and LTL shipping. Our team analyzes your shipment requirements to provide the most efficient and cost-effective solution, backed by reliable carriers and superior customer service.",
+            desc: "We simplify truckload shipping. Our platform analyzes your requirements and matches you with the right capacity, route, and carrier—delivering visibility and control at every step.",
             reasons: [
-                { icon: "TrendingUp", title: "Carrier Network", desc: "Access to a vast network of vetted and reliable carriers." },
-                { icon: "Clock", title: "Optimized Routing", desc: "Efficient route planning to reduce transit times and costs." },
-                { icon: "Monitor", title: "Proactive Communication", desc: "Regular updates and dedicated support throughout the shipment." },
-                { icon: "ShieldCheck", title: "Cargo Safety", desc: "Strict safety standards and insurance coverage for peace of mind." },
-                { icon: "Headset", title: "Customized Solutions", desc: "Tailored strategies to meet your unique supply chain goals." }
+                { icon: "TrendingUp", title: "Extensive Network", desc: "Access to thousands of vetted, reliable carriers." },
+                { icon: "Clock", title: "Fast Transit", desc: "Optimized routes for reduced delivery times." },
+                { icon: "Monitor", title: "Full Visibility", desc: "Real-time tracking from pickup to delivery." },
+                { icon: "ShieldCheck", title: "Cargo Protection", desc: "Strict safety standards and comprehensive coverage." },
+                { icon: "Headset", title: "Expert Support", desc: "Dedicated team for proactive communication." }
             ],
-            ctaTitle: "Partner with Advik Freight for FTL & LTL Solutions",
-            ctaDesc: "Experience the difference of reliable, flexible, and cost-effective truckload shipping. Get a quote today."
+            ctaTitle: "Partner with Advik Freight for Truckload Solutions",
+            ctaDesc: "Experience the difference of reliable, flexible, and technology-driven truckload shipping. Get a quote today."
         },
         ctaTitle: "Ready to Move Your Freight?",
-        ctaDesc: "Contact us today for a competitive FTL or LTL quote."
+        ctaDesc: "Get a competitive FTL or LTL quote in minutes."
     },
     "flatbed": {
         title: "Flatbed",
         heroImage: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Reliable flatbed trucking services for transporting oversized, heavy, and irregularly shaped cargo.",
+        heroDesc: "Specialized flatbed trucking for oversized, heavy, and irregularly shaped cargo. Expert handling for construction, manufacturing, and industrial shipments.",
         introTitle: "Flatbed Trucking Services",
         introDesc: [
-            "Advik Freight provides reliable flatbed trucking services for transporting oversized, heavy, and irregularly shaped cargo. Our experienced team ensures safe handling, secure loading, and timely delivery of all shipments.",
-            "Flatbed shipping involves transporting cargo on open trailers without sides or a roof, making it ideal for oversized or unusually shaped items. This method allows for easy loading and unloading with cranes or forklifts while providing maximum flexibility for transporting large freight."
+            "Flatbed shipping is ideal for cargo that's too large, heavy, or awkwardly shaped to fit in an enclosed trailer. Our flatbed solutions provide the flexibility to transport machinery, construction materials, steel, lumber, and equipment of all sizes safely and efficiently.",
+            "With experienced drivers trained in specialized securement techniques and a modern fleet of flatbed, step-deck, and RGN trailers, we handle your most challenging freight requirements. From route planning around height and weight restrictions to obtaining necessary permits, we manage every detail."
         ],
         introImage: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Consultation", desc: "Assess cargo requirements & flatbed solution." },
-                { title: "Route Planning", desc: "Plan safe routes considering restrictions." },
-                { title: "Loading & Securing", desc: "Proper techniques to secure cargo safely." },
-                { title: "Transportation", desc: "Precision transport by experienced drivers." },
-                { title: "Tracking & Updates", desc: "Real-time updates throughout transport." }
+                { title: "Standard Flatbed", desc: "48' and 53' trailers for oversized loads." },
+                { title: "Step Deck", desc: "Lower deck height for taller freight." },
+                { title: "RGN (Lowboy)", desc: "Heavy haul for machinery and equipment." },
+                { title: "Specialized Securement", desc: "Chains, straps, and tarping services." },
+                { title: "Permit & Escort", desc: "Oversize/overweight permit coordination." }
             ],
             whenToChoose: [
-                "Construction & Heavy Equipment",
-                "Industrial Machinery",
-                "Energy & Power Generation",
-                "Automotive & Transportation",
-                "Infrastructure & Large-Scale Projects"
+                "Construction equipment and building materials.",
+                "Steel, pipes, and manufactured goods.",
+                "Industrial machinery and manufacturing equipment.",
+                "Oversized or overweight cargo requiring permits.",
+                "Loads requiring crane or forklift loading."
             ],
             benefits: [
-                { title: "Versatile Cargo Handling", desc: "Transport oversized & irregular items safely." },
-                { title: "Experienced Drivers", desc: "Skilled professionals for complex loads." },
-                { title: "Modern Fleet", desc: "Equipped for maximum stability & safety." },
-                { title: "Regulatory Compliance", desc: "Adherence to safety & legal regulations." },
-                { title: "On-Time Delivery", desc: "Reliable scheduling & route planning." }
+                { title: "Versatile Loading", desc: "Top, side, and rear loading options." },
+                { title: "Experienced Drivers", desc: "Trained in proper securement and handling." },
+                { title: "Route Planning", desc: "Navigate restrictions and optimize delivery." },
+                { title: "Equipment Variety", desc: "Flatbed, step-deck, RGN, and conestoga options." },
+                { title: "Full Coverage", desc: "Tarping services for weather protection." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "Advik Freight provides reliable flatbed trucking solutions to transport oversized and heavy cargo safely and efficiently. Our combination of modern fleet, experienced drivers, and expert logistics planning makes us a trusted partner for flatbed transportation needs.",
+            desc: "Our flatbed specialists understand the unique requirements of oversized and heavy cargo. We combine experienced drivers, proper equipment, and detailed planning to ensure your freight arrives safely.",
             reasons: [
-                { icon: "TrendingUp", title: "Reliable Solutions", desc: "Transport oversized and heavy cargo safely and efficiently." },
-                { icon: "Monitor", title: "Modern Fleet", desc: "Equipped for maximum stability and load safety." },
-                { icon: "Clock", title: "Expert Planning", desc: "Efficient route planning considering all restrictions." },
-                { icon: "ShieldCheck", title: "Safety Focused", desc: "Strict adherence to safety and legal regulations." },
-                { icon: "Headset", title: "Trusted Partner", desc: "Experienced drivers and expert logistics planning." }
+                { icon: "TrendingUp", title: "Specialized Expertise", desc: "Years of experience in flatbed and heavy haul logistics." },
+                { icon: "Monitor", title: "Equipment Options", desc: "Full range of flatbed, step-deck, and RGN trailers." },
+                { icon: "Clock", title: "Permit Services", desc: "We handle oversize permits and route planning." },
+                { icon: "ShieldCheck", title: "Safety First", desc: "Proper securement and DOT compliance on every load." },
+                { icon: "Headset", title: "Dedicated Support", desc: "Expert team for complex shipping requirements." }
             ],
             ctaTitle: "Partner with Advik Freight for Flatbed Solutions",
-            ctaDesc: "Transport your oversized and heavy cargo with confidence and precision."
+            ctaDesc: "From standard flatbed to heavy haul, we have the expertise to move your specialized freight."
         },
-        ctaTitle: "Ready to Move Your Heavy Cargo?",
-        ctaDesc: "Contact us today to discuss your flatbed shipping needs."
+        ctaTitle: "Need Flatbed Shipping?",
+        ctaDesc: "Get a quote for your oversized or specialized cargo today."
     },
     "intermodal": {
         title: "Intermodal",
         heroImage: "https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Seamless truck and rail transport solutions. Reduce costs and carbon footprint while enhancing reliability.",
+        heroDesc: "Take advantage of cost-effective and sustainable solutions from a leading intermodal provider in North America.",
         introTitle: "Intermodal Shipping Services",
         introDesc: [
-            "Advik Freight offers reliable Intermodal Shipping Services that combine multiple modes of transportation—truck, rail, and sometimes sea—to deliver cost-effective, efficient, and environmentally friendly freight solutions.",
-            "Intermodal shipping is ideal for businesses looking to optimize routes, reduce transportation costs, and improve delivery reliability. By integrating trucking, rail, and ocean transport, we provide seamless door-to-door service while leveraging the strengths of each mode."
+            "Advik Freight offers reliable Intermodal Shipping Services that combine the cost efficiency of rail with the flexibility of trucking. As a leading intermodal provider, we deliver sustainable freight solutions that reduce your carbon footprint while optimizing your supply chain.",
+            "Our intermodal solutions are designed for businesses looking to balance speed, cost, and sustainability. By leveraging our extensive rail partnerships and trucking network, we provide seamless door-to-door service with real-time visibility at every step."
         ],
         introImage: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Truck-to-Rail Transfers", desc: "Efficient loading/unloading." },
-                { title: "Door-to-Door Delivery", desc: "Seamless pickup & final delivery." },
-                { title: "Containerized Freight", desc: "Standardized, secure containers." },
-                { title: "Route Optimization", desc: "Strategic planning for speed." },
-                { title: "Real-Time Tracking", desc: "Monitor every segment." }
+                { title: "Truck-to-Rail Integration", desc: "Seamless container transfers between modes." },
+                { title: "Door-to-Door Service", desc: "Complete pickup to final delivery coverage." },
+                { title: "Container Solutions", desc: "53' domestic and international containers." },
+                { title: "Real-Time Tracking", desc: "Visibility across every segment of transit." },
+                { title: "Expedited Options", desc: "Priority rail service for time-sensitive freight." }
             ],
             whenToChoose: [
-                "Long-distance transportation with minimal handling.",
-                "Reduce fuel costs and carbon footprint.",
-                "Flexible solutions for large or bulk shipments.",
-                "Non-urgent but reliable transport option."
+                "Long-haul shipments over 500 miles.",
+                "Cost-conscious transportation needs.",
+                "Sustainability and carbon reduction goals.",
+                "Predictable, high-volume shipping lanes."
             ],
             benefits: [
-                { title: "Cost Efficiency", desc: "Rail savings + truck flexibility." },
-                { title: "Sustainability", desc: "Lower emissions than truck-only." },
-                { title: "Enhanced Security", desc: "Minimal handling reduces risk." },
-                { title: "Scalable Solutions", desc: "Great for heavy/bulk cargo." },
-                { title: "Reliable Transit", desc: "Optimized multi-mode routes." }
+                { title: "Cost Savings", desc: "Up to 40% savings vs. over-the-road trucking." },
+                { title: "Sustainability", desc: "Reduce carbon emissions by up to 75%." },
+                { title: "Capacity Access", desc: "Reliable capacity even in tight markets." },
+                { title: "Reduced Handling", desc: "Containerized freight means less damage risk." },
+                { title: "Nationwide Reach", desc: "Access to major markets across North America." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "We don't just move cargo; we optimize your entire supply chain. With our intermodal expertise, you gain access to a network that balances speed, cost, and sustainability perfectly.",
+            desc: "We don't just move containers—we optimize your entire supply chain. Our intermodal expertise gives you access to a network that balances speed, cost, and sustainability perfectly.",
             reasons: [
-                { icon: "TrendingUp", title: "Integrated Logistics", desc: "Seamless coordination across trucking, rail, and ocean services." },
-                { icon: "Clock", title: "Expert Planning", desc: "Experienced team designs the most efficient transport routes." },
-                { icon: "ShieldCheck", title: "Cost-Effective Solutions", desc: "Optimized intermodal shipping reduces your overall freight expenses." },
-                { icon: "Monitor", title: "Advanced Technology", desc: "Real-time shipment tracking and container monitoring." },
-                { icon: "Headset", title: "Dedicated Support", desc: "Our team provides end-to-end assistance for every shipment." }
+                { icon: "TrendingUp", title: "Leading Provider", desc: "One of North America's leading intermodal service providers." },
+                { icon: "Clock", title: "Reliable Transit", desc: "Consistent, predictable transit times on major lanes." },
+                { icon: "ShieldCheck", title: "Cost Efficiency", desc: "Significant savings compared to over-the-road shipping." },
+                { icon: "Monitor", title: "Full Visibility", desc: "Real-time tracking from origin to destination." },
+                { icon: "Headset", title: "Dedicated Support", desc: "Expert team providing end-to-end assistance." }
             ],
             ctaTitle: "Partner with Advik Freight for Intermodal Solutions",
-            ctaDesc: "Advik Freight ensures your intermodal shipments are handled with precision, efficiency, and reliability. Whether you're shipping domestically or internationally, our intermodal services provide the flexibility and cost savings your business needs."
+            ctaDesc: "Get the cost savings of rail with the flexibility of trucking. Let us design an intermodal solution that meets your needs."
         },
-        ctaTitle: "Ready to Optimize Your Intermodal Logistics?",
-        ctaDesc: "Let's discuss how we can streamline your operations and reduce costs."
+        ctaTitle: "Ready to Go Intermodal?",
+        ctaDesc: "Contact us today for a competitive intermodal quote."
     },
     "otr": {
         title: "OTR",
         heroImage: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Reliable long-haul trucking services across the nation. Safe, efficient, and on-time delivery for all your cargo needs.",
-        introTitle: "OTR (Over-The-Road) Freight Services",
+        heroDesc: "Long-haul trucking with the capacity and reliability you need. Coast-to-coast delivery with real-time visibility.",
+        introTitle: "Over-The-Road Trucking Services",
         introDesc: [
-            "Advik Freight specializes in providing reliable OTR (Over-The-Road) trucking services for businesses across the nation. Our team ensures your cargo is transported safely, efficiently, and delivered on time. From small shipments to large freight loads, we handle all OTR shipments with precision and care.",
-            "OTR freight refers to shipments transported by truck over long distances, often crossing state lines. This includes full truckload (FTL) and less-than-truckload (LTL) shipments, delivering a variety of goods including industrial products, consumer goods, and commercial cargo. Experienced drivers, modern trucks, and regulatory compliance ensure every shipment reaches its destination safely and on schedule."
+            "Get the capacity you need for your over-the-road freight. Our extensive carrier network and technology platform connect you with qualified drivers for reliable long-haul transportation across North America.",
+            "Whether you're shipping across state lines or coast-to-coast, we provide the visibility, communication, and service quality that keeps your supply chain moving. From dry van to specialized equipment, we match your freight with the right solution."
         ],
         introImage: "https://images.unsplash.com/photo-1506306488026-09548b96c2f7?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Shipment Consultation", desc: "Assess cargo size, type, and requirements." },
-                { title: "Route Optimization", desc: "Plan safest and most efficient routes." },
-                { title: "Loading & Securing", desc: "Proper methods to protect cargo." },
-                { title: "Transportation", desc: "Reliable transport across long distances." },
-                { title: "Tracking & Updates", desc: "Real-time monitoring and communication." }
+                { title: "Dry Van Transport", desc: "Enclosed trailers for general freight." },
+                { title: "Long-Haul Routes", desc: "Coast-to-coast and regional lanes." },
+                { title: "Dedicated Capacity", desc: "Consistent drivers for your freight." },
+                { title: "Real-Time Tracking", desc: "GPS visibility throughout transit." },
+                { title: "Expedited Options", desc: "Time-critical delivery solutions." }
             ],
             whenToChoose: [
-                "Manufacturing & Industrial Goods",
-                "Consumer Products & Retail",
-                "Construction Materials & Equipment",
-                "Automotive & Machinery",
-                "Healthcare & Pharmaceuticals"
+                "Cross-country and regional shipments.",
+                "General freight requiring enclosed transport.",
+                "Consistent, high-volume shipping needs.",
+                "Time-sensitive cargo requiring visibility.",
+                "Retail, manufacturing, and distribution freight."
             ],
             benefits: [
-                { title: "Nationwide Coverage", desc: "Comprehensive long-haul solutions." },
-                { title: "Experienced Drivers", desc: "Skilled professionals ensuring safety." },
-                { title: "Advanced Fleet", desc: "Modern trucks with GPS and safety tech." },
-                { title: "Flexible Options", desc: "Tailored FTL or LTL solutions." },
-                { title: "Reliable Communication", desc: "Real-time updates at every stage." }
+                { title: "Nationwide Reach", desc: "Access to lanes across North America." },
+                { title: "Reliable Capacity", desc: "Carrier network for any market conditions." },
+                { title: "Driver Quality", desc: "Vetted carriers with safety focus." },
+                { title: "Full Visibility", desc: "Track every shipment in real-time." },
+                { title: "Proactive Updates", desc: "Communication throughout transit." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "Advik Freight provides reliable OTR trucking services to ensure your shipments are delivered safely and efficiently across the country. Our combination of experienced drivers, modern fleet, and optimized logistics makes us a trusted partner for long-haul freight.",
+            desc: "We connect your freight with the capacity it needs. Our carrier relationships, technology platform, and service team ensure reliable delivery across every lane.",
             reasons: [
-                { icon: "TrendingUp", title: "Reliable Service", desc: "Ensure your shipments are delivered safely and efficiently." },
-                { icon: "Clock", title: "Experienced Drivers", desc: "Skilled professionals ensuring timely and safe cargo delivery." },
-                { icon: "Monitor", title: "Modern Fleet", desc: "Optimized logistics with modern trucks and tracking technology." },
-                { icon: "ShieldCheck", title: "Trusted Partner", desc: "A trusted partner for long-haul freight across the country." },
-                { icon: "Headset", title: "Peace of Mind", desc: "Streamline your transportation operations with confidence." }
+                { icon: "TrendingUp", title: "Capacity Network", desc: "Thousands of qualified carriers nationwide." },
+                { icon: "Clock", title: "On-Time Performance", desc: "Reliable delivery you can count on." },
+                { icon: "Monitor", title: "Shipment Visibility", desc: "Real-time tracking from pickup to delivery." },
+                { icon: "ShieldCheck", title: "Carrier Quality", desc: "Vetted carriers with strong safety records." },
+                { icon: "Headset", title: "Dedicated Support", desc: "Team available for proactive communication." }
             ],
             ctaTitle: "Partner with Advik Freight for OTR Solutions",
-            ctaDesc: "Streamline your transportation operations with confidence and peace of mind."
+            ctaDesc: "Get reliable long-haul capacity for your freight."
         },
-        ctaTitle: "Ready to Move Your Freight?",
-        ctaDesc: "Contact us today to discuss your OTR shipping needs."
+        ctaTitle: "Need Long-Haul Trucking?",
+        ctaDesc: "Get a quote for your over-the-road shipment."
     },
     "power-only": {
         title: "Power-Only",
         heroImage: "https://images.unsplash.com/photo-1592924846862-92775a77571d?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Flexible trucking solutions to move your trailers efficiently. Leverage our experienced drivers and modern power units without the fleet overhead.",
-        introTitle: "Power-Only Trucking Services",
+        heroDesc: "Flexible capacity without the fleet overhead. We provide the tractors and drivers to move your trailers when you need it.",
+        introTitle: "Power-Only Services",
         introDesc: [
-            "Advik Freight offers reliable Power-Only trucking services to help businesses move trailers efficiently without the need for owning a full tractor-trailer fleet. Power-Only services allow you to leverage our experienced drivers and modern trucks to transport your pre-loaded trailers safely and on time. This flexible solution is ideal for companies looking to reduce fleet costs while ensuring consistent freight movement.",
-            "Our Power-Only services are perfect for shippers, logistics providers, and freight brokers who require dedicated trucking solutions without the overhead of managing additional tractors. We specialize in handling dry vans, reefers, flatbeds, and specialized trailers, providing safe and efficient transportation across local, regional, and nationwide routes."
+            "Power-Only services give you fleet flexibility without the capital investment. We provide tractors and qualified drivers to move your trailers—whether dry van, reefer, flatbed, or specialized equipment—when and where you need them.",
+            "Perfect for peak seasons, driver shortages, or expanding capacity without adding trucks to your fleet. Our drivers are experienced in handling various trailer types and equipment, ensuring your freight moves safely and on schedule."
         ],
         introImage: "https://images.unsplash.com/photo-1605218427360-36390f85841c?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Consultation", desc: "Assess transportation needs & trailer type." },
-                { title: "Driver Assignment", desc: "Qualified drivers & tractors assigned." },
-                { title: "Pickup & Inspection", desc: "Verify trailer condition & load security." },
-                { title: "Transportation", desc: "Safe transport across all routes." },
-                { title: "Delivery & Handover", desc: "On-schedule delivery with updates." }
+                { title: "Tractor & Driver", desc: "Experienced operators for your trailers." },
+                { title: "All Trailer Types", desc: "Dry van, reefer, flatbed, and more." },
+                { title: "Flexible Scheduling", desc: "On-demand or scheduled service." },
+                { title: "Drop & Hook", desc: "Efficient trailer swaps at your facility." },
+                { title: "Full Visibility", desc: "Real-time tracking of your assets." }
             ],
             whenToChoose: [
-                "Retail & E-Commerce Distribution",
-                "Construction & Heavy Equipment Transport",
-                "Food & Beverage Logistics",
-                "Pharmaceuticals & Healthcare",
-                "Industrial Manufacturing & Machinery",
-                "Automotive Parts & Vehicle Transport"
+                "Peak season capacity needs.",
+                "Driver shortages or fleet gaps.",
+                "Cost-effective fleet expansion.",
+                "Overflow freight requiring immediate capacity.",
+                "Special projects or one-time needs."
             ],
             benefits: [
-                { title: "Cost Efficiency", desc: "Reduce overhead & capital costs." },
-                { title: "Flexibility", desc: "Move various trailer types as needed." },
-                { title: "Scalable Operations", desc: "Easily scale based on demand." },
-                { title: "Experienced Drivers", desc: "Professionals for diverse cargo." },
-                { title: "Real-Time Tracking", desc: "Full visibility throughout transit." }
+                { title: "No Capital Outlay", desc: "Capacity without purchasing tractors." },
+                { title: "Operational Flexibility", desc: "Scale up or down as needed." },
+                { title: "Experienced Drivers", desc: "Qualified operators for all trailer types." },
+                { title: "Reduced Overhead", desc: "No maintenance or insurance costs." },
+                { title: "Quick Response", desc: "Capacity available when you need it." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "Advik Freight is committed to delivering superior Power-Only trucking services that provide flexibility, reliability, and cost-effective solutions for businesses of all sizes. Our combination of experienced drivers, modern tractors, and tailored logistics solutions makes us the ideal partner for efficient trailer transportation.",
+            desc: "Our Power-Only services give you the fleet flexibility you need without the overhead. We provide reliable tractors and experienced drivers that integrate seamlessly with your operations.",
             reasons: [
-                { icon: "TrendingUp", title: "Operational Flexibility", desc: "Scale transportation capacity without investing in tractors." },
-                { icon: "ShieldCheck", title: "Cost Savings", desc: "Lower maintenance and fleet management costs." },
-                { icon: "Monitor", title: "Specialized Handling", desc: "Ability to transport reefers, flatbeds, and oversized loads." },
-                { icon: "Clock", title: "Nationwide Coverage", desc: "Reach all major cities with experienced drivers." },
-                { icon: "Headset", title: "Trusted Partner", desc: "Dedicated team ensures freight safety and compliance." }
+                { icon: "TrendingUp", title: "Fleet Flexibility", desc: "Expand capacity without investing in tractors." },
+                { icon: "ShieldCheck", title: "Cost Efficiency", desc: "Eliminate maintenance and driver management costs." },
+                { icon: "Monitor", title: "Full Visibility", desc: "Track your trailers throughout transit." },
+                { icon: "Clock", title: "Quick Deployment", desc: "Drivers available for immediate dispatch." },
+                { icon: "Headset", title: "Dedicated Support", desc: "Account team for scheduling and coordination." }
             ],
-            ctaTitle: "Partner with Advik Freight for Power-Only Solutions",
-            ctaDesc: "Streamline your fleet operations, enhance supply chain efficiency, and ensure your trailers reach their destination safely and on time."
+            ctaTitle: "Partner with Advik Freight for Power-Only",
+            ctaDesc: "Get the tractor capacity you need without the overhead."
         },
-        ctaTitle: "Ready to Optimize Your Trailer Transport?",
-        ctaDesc: "Contact us today to discuss your Power-Only trucking needs."
+        ctaTitle: "Need Power-Only Services?",
+        ctaDesc: "Get a quote for trailer transport today."
     },
     "reefer": {
         title: "Reefer",
         heroImage: "https://images.unsplash.com/photo-1626325763567-42284f483a98?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Reliable temperature-controlled trucking services. Ensure your perishable and sensitive cargo is transported safely and efficiently.",
-        introTitle: "Reefer (Refrigerated Trucking) Services",
+        heroDesc: "Temperature-controlled transport with continuous monitoring. Protect your perishable and sensitive cargo throughout the cold chain.",
+        introTitle: "Refrigerated Transport Services",
         introDesc: [
-            "Advik Freight provides reliable reefer and temperature-controlled trucking services to ensure your perishable and sensitive cargo is transported safely and efficiently. Our team maintains strict temperature monitoring throughout transit to preserve the quality and integrity of your goods.",
-            "Our modern fleet of refrigerated trucks is equipped with advanced cooling systems and real-time monitoring technology. We handle a variety of shipments, including food products, pharmaceuticals, chemicals, and other temperature-sensitive cargo, ensuring compliance with industry standards and regulatory requirements."
+            "Our reefer and temperature-controlled trucking services ensure your perishable and sensitive cargo maintains precise temperatures from pickup to delivery. With continuous monitoring and proactive alerts, you have full visibility into your cold chain.",
+            "Our modern refrigerated fleet is equipped with advanced cooling systems capable of maintaining temperatures from -20°F to 65°F. We handle food products, pharmaceuticals, chemicals, and other temperature-sensitive goods with strict compliance to FDA, FSMA, and industry standards."
         ],
         introImage: "https://images.unsplash.com/photo-1595246140625-573b715d11dc?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Consultation", desc: "Evaluate shipment type & temp requirements." },
-                { title: "Route Planning", desc: "Select optimized routes for consistent temp." },
-                { title: "Loading & Securing", desc: "Proper handling to prevent damage." },
-                { title: "Transportation", desc: "Skilled drivers with continuous monitoring." },
-                { title: "Tracking & Updates", desc: "Real-time updates from pickup to delivery." }
+                { title: "Multi-Temp Capability", desc: "Single or multi-temperature zones available." },
+                { title: "Continuous Monitoring", desc: "Real-time temperature tracking and alerts." },
+                { title: "Compliance Documentation", desc: "Temperature logs for regulatory requirements." },
+                { title: "Expedited Cold Chain", desc: "Time-critical delivery for sensitive goods." },
+                { title: "Cross-Dock Services", desc: "Temperature-maintained transfers and storage." }
             ],
             whenToChoose: [
-                "Food & Beverage",
-                "Pharmaceuticals & Healthcare",
-                "Floral & Perishable Goods",
-                "Chemicals & Specialty Products",
-                "Cold Chain Logistics for Retail & E-commerce"
+                "Fresh and frozen food products.",
+                "Pharmaceuticals and medical supplies.",
+                "Dairy, produce, and perishable goods.",
+                "Chemicals requiring temperature control.",
+                "Any cargo with strict temperature requirements."
             ],
             benefits: [
-                { title: "Temperature Control", desc: "Maintain precise conditions for cargo." },
-                { title: "Advanced Fleet", desc: "Modern trucks with reliable cooling systems." },
-                { title: "Regulatory Compliance", desc: "Adherence to safety and quality standards." },
-                { title: "On-Time Delivery", desc: "Timely and safe delivery for perishables." },
-                { title: "Real-Time Tracking", desc: "Monitor shipments with proactive communication." }
+                { title: "Temperature Precision", desc: "Maintain exact conditions throughout transit." },
+                { title: "Full Visibility", desc: "Real-time monitoring and temperature logs." },
+                { title: "Regulatory Compliance", desc: "Meet FDA, FSMA, and industry standards." },
+                { title: "Reduced Spoilage", desc: "Proactive alerts prevent temperature excursions." },
+                { title: "On-Time Delivery", desc: "Priority handling for time-sensitive cargo." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "Advik Freight delivers dependable reefer and temperature-controlled trucking solutions to ensure your sensitive cargo reaches its destination safely, efficiently, and on schedule. Our advanced fleet, experienced drivers, and precise logistics make us a trusted partner for all refrigerated shipping needs.",
+            desc: "Your cold chain is only as strong as its weakest link. We provide end-to-end temperature control with visibility, compliance, and reliability that protects your products and reputation.",
             reasons: [
-                { icon: "TrendingUp", title: "Reliable Solutions", desc: "Dependable reefer and temperature-controlled trucking solutions." },
-                { icon: "Clock", title: "Advanced Fleet", desc: "Modern refrigerated trucks equipped with reliable cooling systems." },
-                { icon: "Monitor", title: "Precise Logistics", desc: "Optimized routes and real-time tracking for timely delivery." },
-                { icon: "ShieldCheck", title: "Safety First", desc: "Strict adherence to safety and quality standards." },
-                { icon: "Headset", title: "Experienced Drivers", desc: "Skilled professionals ensuring safe cargo transport." }
+                { icon: "TrendingUp", title: "Advanced Fleet", desc: "Modern reefer units with precise temperature control." },
+                { icon: "Clock", title: "Real-Time Monitoring", desc: "Continuous visibility into temperature conditions." },
+                { icon: "Monitor", title: "Compliance Ready", desc: "Documentation and logs for regulatory requirements." },
+                { icon: "ShieldCheck", title: "Product Protection", desc: "Proactive management to prevent spoilage." },
+                { icon: "Headset", title: "Expert Team", desc: "Experienced in cold chain logistics and handling." }
             ],
-            ctaTitle: "Partner with Advik Freight for Reefer Shipping",
-            ctaDesc: "Ensure your perishable and sensitive cargo is transported safely and efficiently with our reefer services."
+            ctaTitle: "Partner with Advik Freight for Reefer Services",
+            ctaDesc: "Protect your perishable cargo with temperature-controlled transport you can trust."
         },
-        ctaTitle: "Ready to Ship Your Perishables?",
-        ctaDesc: "Contact us today to discuss your reefer shipping needs."
+        ctaTitle: "Need Temperature-Controlled Shipping?",
+        ctaDesc: "Get a quote for your refrigerated freight today."
     },
     "warehousing": {
         title: "Warehousing",
         heroImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1470&auto=format&fit=crop",
-        heroDesc: "Secure and efficient warehousing solutions to optimize your supply chain. Flexible storage, timely transloading, and distribution services.",
-        introTitle: "Warehousing & Transloading",
+        heroDesc: "Custom supply chain solutions with inventory management and day-to-day operations handled for you. Strategic locations across North America.",
+        introTitle: "Warehousing & Logistics Services",
         introDesc: [
-            "Advik Freight provides secure and efficient warehousing and transloading solutions to optimize your supply chain operations. Our team ensures smooth handling of goods between different transportation modes, minimizing delays and maintaining inventory integrity throughout the process.",
-            "With strategically located facilities, advanced technology, and experienced staff, we offer flexible storage, timely transloading, and distribution services that cater to businesses of all sizes. Our solutions are designed to reduce costs and enhance operational efficiency."
+            "Get a provider that creates a custom supply chain for your business and handles the day-to-day operations for you. Our warehousing and managed logistics solutions give you flexibility, visibility, and control over your inventory and distribution.",
+            "With strategically located facilities near major transportation hubs, we offer flexible storage, transloading, cross-docking, and distribution services. Our technology platform provides real-time inventory visibility and seamless integration with your systems."
         ],
         introImage: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1470&auto=format&fit=crop",
         features: {
             services: [
-                { title: "Storage Management", desc: "Flexible options for palletized & bulk items." },
-                { title: "Transloading Services", desc: "Efficient transfer between transport modes." },
-                { title: "Inventory Tracking", desc: "Real-time monitoring and reporting." },
-                { title: "Order Fulfillment", desc: "Picking, packing, and distribution." },
-                { title: "Cross-Docking", desc: "Streamlined transfer to reduce storage time." }
+                { title: "Flexible Storage", desc: "Short-term and long-term warehousing options." },
+                { title: "Transloading", desc: "Container-to-truck cargo transfers." },
+                { title: "Cross-Docking", desc: "Direct transfer for reduced storage time." },
+                { title: "Inventory Management", desc: "Real-time tracking and reporting." },
+                { title: "Value-Added Services", desc: "Kitting, labeling, and order fulfillment." }
             ],
             whenToChoose: [
-                "Retail & E-Commerce",
-                "Industrial & Manufacturing",
-                "Construction & Heavy Equipment",
-                "Automotive & Machinery",
-                "Food & Beverage Logistics"
+                "Need flexible storage capacity without long-term commitment.",
+                "Require transloading between rail/ocean and truck.",
+                "Want to reduce inventory holding costs with cross-docking.",
+                "Need a partner to manage distribution operations.",
+                "Require visibility into inventory across locations."
             ],
             benefits: [
-                { title: "Efficient Operations", desc: "Reduce handling time and ensure faster movement." },
-                { title: "Advanced Technology", desc: "Integrated WMS for real-time tracking." },
-                { title: "Scalable Solutions", desc: "Adaptable capacity as business needs grow." },
-                { title: "Safety & Compliance", desc: "Adherence to industry standards." },
-                { title: "Strategic Locations", desc: "Facilities near major transportation hubs." }
+                { title: "Strategic Locations", desc: "Facilities near major ports and transportation hubs." },
+                { title: "Scalable Capacity", desc: "Flex up or down based on your needs." },
+                { title: "Full Visibility", desc: "Real-time inventory and order tracking." },
+                { title: "Cost Efficiency", desc: "Reduce overhead with shared resources." },
+                { title: "Seamless Integration", desc: "Connect with your existing systems." }
             ]
         },
         whyChoose: {
             title: "Why Choose Advik Freight?",
-            desc: "Advik Freight ensures your warehousing and transloading needs are handled with expertise, reliability, and precision. Our combination of advanced facilities, skilled personnel, and tailored logistics strategies makes us a trusted partner for seamless supply chain operations.",
+            desc: "We handle your warehousing and logistics operations so you can focus on your business. Our combination of strategic facilities, experienced staff, and technology gives you the flexibility and visibility you need.",
             reasons: [
-                { icon: "TrendingUp", title: "Expertise", desc: "Handled with expertise, reliability, and precision." },
-                { icon: "Clock", title: "Advanced Facilities", desc: "Modern warehousing facilities equipped with latest technology." },
-                { icon: "Monitor", title: "Tailored Logistics", desc: "Customized strategies for seamless supply chain operations." },
-                { icon: "ShieldCheck", title: "Trusted Partner", desc: "A reliable partner for businesses of all sizes." },
-                { icon: "Headset", title: "Skilled Personnel", desc: "Experienced staff ensuring smooth handling of goods." }
+                { icon: "TrendingUp", title: "Managed Solutions", desc: "We handle operations so you can focus on growth." },
+                { icon: "Clock", title: "Strategic Network", desc: "Facilities located for optimal distribution." },
+                { icon: "Monitor", title: "Inventory Visibility", desc: "Real-time tracking across all locations." },
+                { icon: "ShieldCheck", title: "Quality Assurance", desc: "Strict handling and compliance standards." },
+                { icon: "Headset", title: "Dedicated Team", desc: "Account management and operational support." }
             ],
-            ctaTitle: "Partner with Advik Freight for Warehousing Solutions",
-            ctaDesc: "Optimize your supply chain with our secure and efficient warehousing and transloading services."
+            ctaTitle: "Partner with Advik Freight for Warehousing",
+            ctaDesc: "Get custom supply chain solutions that scale with your business."
         },
-        ctaTitle: "Ready to Optimize Your Warehousing?",
-        ctaDesc: "Contact us today to discuss your storage and transloading needs."
+        ctaTitle: "Need Warehousing Solutions?",
+        ctaDesc: "Contact us for flexible storage and logistics services."
     }
 };
