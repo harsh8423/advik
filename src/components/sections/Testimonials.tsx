@@ -68,7 +68,7 @@ export default function Testimonials() {
                         Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-400">Industry Leaders</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Hear from our partners about their experience with Advik Freight Logistics
+                        Hear from our partners about their experience with Advik Freight
                     </p>
                 </motion.div>
             </div>

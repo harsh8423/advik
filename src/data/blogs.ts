@@ -32,7 +32,7 @@ export const blogs: BlogPost[] = [
         `,
         author: "Sarah Jenkins",
         date: "October 15, 2025",
-        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb7d5b43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image: "/blog3.jpeg",
         tags: ["Sustainability", "Green Logistics", "Innovation"],
         slug: "future-sustainable-logistics"
     },

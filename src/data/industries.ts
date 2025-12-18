@@ -1,7 +1,7 @@
 export const industries = {
     automotive: {
         title: "Automotive",
-        heroImage: "https://images.unsplash.com/photo-1565514020176-db7933f82022?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/services-img/automative.jpeg",
         heroDesc: "Reliable and efficient logistics solutions for the automotive industry. From components to finished vehicles, we ensure on-time delivery and complete visibility.",
         solutionsTitle: "Automotive Logistics",
         solutionsDesc: "At Advik Freight, we provide reliable and efficient logistics solutions for the automotive industry. From components and spare parts to finished vehicles, our services ensure on-time delivery, cost efficiency, and complete supply chain visibility. Our team works closely with OEMs, suppliers, and dealerships to tailor logistics strategies that match their unique operational requirements. We leverage advanced tracking systems, optimized transport routes, and industry expertise to minimize delays and reduce costs. With a focus on safety, precision, and transparency, we help automotive businesses maintain smooth production lines and meet customer demands worldwide.",

@@ -3,6 +3,7 @@
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Truck, Factory, Leaf, ShoppingBag, Hammer, Zap, Utensils, Ship, Plane, Box, ArrowUpRight, Map } from "lucide-react";
@@ -44,6 +45,8 @@ export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
+    const pathname = usePathname();
+    const isLandingPage = pathname === "/";
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious() ?? 0;
@@ -71,7 +74,7 @@ export default function Navbar() {
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
-                scrolled || activeMegaMenu ? "bg-advik-navy/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+                scrolled || activeMegaMenu || !isLandingPage ? "bg-advik-navy/95 backdrop-blur-md border-b border-white/10" : "bg-transparent"
             )}
             onMouseLeave={() => !mobileMenuOpen && setActiveMegaMenu(null)}
         >
@@ -84,7 +87,7 @@ export default function Navbar() {
                         fill
                         className={cn(
                             "object-contain transition-all duration-300",
-                            scrolled || activeMegaMenu ? "" : "brightness-0 invert"
+                            scrolled || activeMegaMenu || !isLandingPage ? "" : "brightness-0 invert"
                         )}
                         priority
                     />
@@ -140,7 +143,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-20 left-0 right-0 pt-2"
+                        className="absolute top-20 left-0 right-0 pt-2 hidden lg:block"
                         onMouseEnter={() => setActiveMegaMenu(activeMegaMenu)}
                         onMouseLeave={() => setActiveMegaMenu(null)}
                     >

@@ -50,7 +50,7 @@ export const services = {
     },
     "ftl-ltl": {
         title: "FTL & LTL",
-        heroImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/services-img/ftl-ltl.jpeg",
         heroDesc: "Move over-the-road shipments with flexibility and efficiency. Full truckload capacity and nationwide LTL access for every shipment size.",
         introTitle: "Truckload & LTL Services",
         introDesc: [
@@ -98,7 +98,7 @@ export const services = {
     },
     "flatbed": {
         title: "Flatbed",
-        heroImage: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/services-img/flarbed.jpeg",
         heroDesc: "Specialized flatbed trucking for oversized, heavy, and irregularly shaped cargo. Expert handling for construction, manufacturing, and industrial shipments.",
         introTitle: "Flatbed Trucking Services",
         introDesc: [
@@ -147,7 +147,7 @@ export const services = {
     },
     "intermodal": {
         title: "Intermodal",
-        heroImage: "https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/services-img/intermodal.jpeg",
         heroDesc: "Take advantage of cost-effective and sustainable solutions from a leading intermodal provider in North America.",
         introTitle: "Intermodal Shipping Services",
         introDesc: [
@@ -195,14 +195,14 @@ export const services = {
     },
     "otr": {
         title: "OTR",
-        heroImage: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/services-img/otr-freight.jpeg",
         heroDesc: "Long-haul trucking with the capacity and reliability you need. Coast-to-coast delivery with real-time visibility.",
         introTitle: "Over-The-Road Trucking Services",
         introDesc: [
             "Get the capacity you need for your over-the-road freight. Our extensive carrier network and technology platform connect you with qualified drivers for reliable long-haul transportation across North America.",
             "Whether you're shipping across state lines or coast-to-coast, we provide the visibility, communication, and service quality that keeps your supply chain moving. From dry van to specialized equipment, we match your freight with the right solution."
         ],
-        introImage: "https://images.unsplash.com/photo-1506306488026-09548b96c2f7?q=80&w=1470&auto=format&fit=crop",
+        introImage: "/services-img/otr-freight.jpeg",
         features: {
             services: [
                 { title: "Dry Van Transport", desc: "Enclosed trailers for general freight." },
@@ -244,14 +244,14 @@ export const services = {
     },
     "power-only": {
         title: "Power-Only",
-        heroImage: "https://images.unsplash.com/photo-1592924846862-92775a77571d?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/services-img/power.jpeg",
         heroDesc: "Flexible capacity without the fleet overhead. We provide the tractors and drivers to move your trailers when you need it.",
         introTitle: "Power-Only Services",
         introDesc: [
             "Power-Only services give you fleet flexibility without the capital investment. We provide tractors and qualified drivers to move your trailers—whether dry van, reefer, flatbed, or specialized equipment—when and where you need them.",
             "Perfect for peak seasons, driver shortages, or expanding capacity without adding trucks to your fleet. Our drivers are experienced in handling various trailer types and equipment, ensuring your freight moves safely and on schedule."
         ],
-        introImage: "https://images.unsplash.com/photo-1605218427360-36390f85841c?q=80&w=1470&auto=format&fit=crop",
+        introImage: "/services-img/power.jpeg",
         features: {
             services: [
                 { title: "Tractor & Driver", desc: "Experienced operators for your trailers." },
@@ -293,7 +293,7 @@ export const services = {
     },
     "reefer": {
         title: "Reefer",
-        heroImage: "https://images.unsplash.com/photo-1626325763567-42284f483a98?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/services-img/reefer.jpeg",
         heroDesc: "Temperature-controlled transport with continuous monitoring. Protect your perishable and sensitive cargo throughout the cold chain.",
         introTitle: "Refrigerated Transport Services",
         introDesc: [
