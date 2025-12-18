@@ -85,10 +85,7 @@ export default function Navbar() {
                         src="/logo.png"
                         alt="Advik Inc"
                         fill
-                        className={cn(
-                            "object-contain transition-all duration-300",
-                            scrolled || activeMegaMenu || !isLandingPage ? "" : "brightness-0 invert"
-                        )}
+                        className="object-contain transition-all duration-300"
                         priority
                     />
                 </Link>
