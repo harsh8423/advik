@@ -1,7 +1,7 @@
 export const services = {
     "drayage": {
         title: "Drayage",
-        heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1470&auto=format&fit=crop",
+        heroImage: "/new/drayage.jpeg",
         heroDesc: "Seamless container transport between ports, rail terminals, and warehouses. Real-time visibility and reliable capacity when you need it.",
         introTitle: "Drayage Services",
         introDesc: [
@@ -98,7 +98,7 @@ export const services = {
     },
     "flatbed": {
         title: "Flatbed",
-        heroImage: "/services-img/flarbed.jpeg",
+        heroImage: "/new/flatbed.jpeg",
         heroDesc: "Specialized flatbed trucking for oversized, heavy, and irregularly shaped cargo. Expert handling for construction, manufacturing, and industrial shipments.",
         introTitle: "Flatbed Trucking Services",
         introDesc: [
@@ -147,7 +147,7 @@ export const services = {
     },
     "intermodal": {
         title: "Intermodal",
-        heroImage: "/services-img/intermodal.jpeg",
+        heroImage: "/new/intermodal.jpeg",
         heroDesc: "Take advantage of cost-effective and sustainable solutions from a leading intermodal provider in North America.",
         introTitle: "Intermodal Shipping Services",
         introDesc: [
@@ -195,7 +195,7 @@ export const services = {
     },
     "otr": {
         title: "OTR",
-        heroImage: "/services-img/otr-freight.jpeg",
+        heroImage: "/new/otr.jpeg",
         heroDesc: "Long-haul trucking with the capacity and reliability you need. Coast-to-coast delivery with real-time visibility.",
         introTitle: "Over-The-Road Trucking Services",
         introDesc: [
@@ -244,7 +244,7 @@ export const services = {
     },
     "power-only": {
         title: "Power-Only",
-        heroImage: "/services-img/power.jpeg",
+        heroImage: "/new/power.jpeg",
         heroDesc: "Flexible capacity without the fleet overhead. We provide the tractors and drivers to move your trailers when you need it.",
         introTitle: "Power-Only Services",
         introDesc: [
@@ -293,7 +293,7 @@ export const services = {
     },
     "reefer": {
         title: "Reefer",
-        heroImage: "/services-img/reefer.jpeg",
+        heroImage: "/new/reefer.jpeg",
         heroDesc: "Temperature-controlled transport with continuous monitoring. Protect your perishable and sensitive cargo throughout the cold chain.",
         introTitle: "Refrigerated Transport Services",
         introDesc: [

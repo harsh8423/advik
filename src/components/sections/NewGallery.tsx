@@ -18,6 +18,27 @@ const IMAGES = [
     'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800&auto=format&fit=crop', // Truck on highway
     'https://www.dhl.com/discover/adobe/dynamicmedia/deliver/dm-aid--fb2074c7-45b1-4634-945b-cbf007e04a1c/desktop-image-1920x918.jpg?quality=82&preferwebp=true', // DHL Image
     'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop', // Warehouse interior
+    '/images/5f3dd70103bf69f2f89f6329_reefer-1.jpg',
+    '/images/8407e3d0da86098b3d9c728a51102097.jpg',
+    '/images/MSC-Seva-in-the-Port-of-Long-Beach.jpg',
+    '/images/container-3857611.jpg',
+    '/images/peterbilt-2650184_1920.jpg',
+    '/images/port-7370411_1280.jpg',
+    '/images/premium_photo-1664695368767-c42483a0bda1.avif',
+    '/images/premium_photo-1733306679049-88a8bf1c2411.avif',
+    '/new/drayage.jpeg',
+    '/new/flatbed.jpeg',
+    '/new/intermodal.jpeg',
+    '/new/otr.jpeg',
+    '/new/power.jpeg',
+    '/new/reefer.jpeg',
+    '/services-img/automative.jpeg',
+    '/services-img/flarbed.jpeg',
+    '/services-img/ftl-ltl.jpeg',
+    '/services-img/intermodal.jpeg',
+    '/services-img/otr-freight.jpeg',
+    '/services-img/power.jpeg',
+    '/services-img/reefer.jpeg',
 ];
 
 interface ParallaxTextProps {

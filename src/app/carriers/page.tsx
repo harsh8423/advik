@@ -47,7 +47,7 @@ export default function CarriersPage() {
 
             <GenericHero
                 title="Partner with Advik Freight"
-                subtitle="For Carriers"
+                subtitle=""
                 image="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
                 description="Join our network of reliable carriers and keep your trucks moving with consistent freight, competitive rates, and superior support."
             />
