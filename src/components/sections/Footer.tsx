@@ -36,15 +36,15 @@ export default function Footer() {
                         <div className="space-y-4 text-gray-400 text-sm">
                             <div className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                <span>125 S Wacker Dr,<br />Chicago, IL - 60606</span>
+                                <span>Advik Freight<br />4400 E Washington Blvd,<br />Commerce, CA 90023</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                                <span>1 (855) 779-2378</span>
+                                <span>+1-800-926-5014</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                                <span>Fax: (323) 544-0726</span>
+                                <span>info@advikfreight.com</span>
                             </div>
                         </div>
                     </div>
