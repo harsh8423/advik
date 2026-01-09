@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Linkedin, Instagram, MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -20,28 +20,22 @@ export default function Footer() {
                             />
                         </Link>
                         <div className="flex gap-4 mb-8">
-                            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white text-gray-400 transition-colors cursor-pointer">
-                                <Facebook className="w-5 h-5" />
-                            </div>
-                            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white text-gray-400 transition-colors cursor-pointer">
-                                <Twitter className="w-5 h-5" />
-                            </div>
-                            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white text-gray-400 transition-colors cursor-pointer">
-                                <Linkedin className="w-5 h-5" />
-                            </div>
-                            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white text-gray-400 transition-colors cursor-pointer">
+                            <a href="https://www.instagram.com/advikfreight/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white text-gray-400 transition-colors cursor-pointer">
                                 <Instagram className="w-5 h-5" />
-                            </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/advik-inc/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white text-gray-400 transition-colors cursor-pointer">
+                                <Linkedin className="w-5 h-5" />
+                            </a>
                         </div>
                         <div className="space-y-4 text-gray-400 text-sm">
                             <div className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                                 <span>Advik Freight<br />4400 E Washington Blvd,<br />Commerce, CA 90023</span>
                             </div>
-                            <div className="flex items-center gap-3">
+                            <a href="tel:+18009265014" className="flex items-center gap-3 hover:text-white transition-colors">
                                 <Phone className="w-5 h-5 text-primary shrink-0" />
                                 <span>+1-800-926-5014</span>
-                            </div>
+                            </a>
                             <div className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-primary shrink-0" />
                                 <span>info@advikfreight.com</span>

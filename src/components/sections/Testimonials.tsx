@@ -39,11 +39,6 @@ const testimonials = [
 export default function Testimonials() {
     return (
         <section className="relative py-24 bg-background overflow-hidden">
-            {/* Background decorative elements */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-            </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 {/* Section Header */}
@@ -92,7 +87,7 @@ export default function Testimonials() {
                                 key={index}
                                 className="flex-shrink-0 w-[85vw] md:w-[400px] group/card"
                             >
-                                <div className="relative bg-gradient-to-br from-card/50 via-card/30 to-transparent backdrop-blur-lg border border-border rounded-2xl p-6 md:p-8 h-full hover:border-primary/50 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary/20 flex flex-col transform hover:-translate-y-1 hover:scale-[1.02]">
+                                <div className="relative bg-card/90 border border-border rounded-2xl p-6 md:p-8 h-full hover:border-primary/50 transition-all duration-300 shadow-xl hover:shadow-2xl flex flex-col">
                                     {/* Glow effect on hover */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover/card:from-primary/5 group-hover/card:to-transparent rounded-2xl transition-all duration-500" />
 

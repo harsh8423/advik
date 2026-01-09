@@ -11,6 +11,7 @@ import { EMAILJS_CONFIG } from "@/config/emailjs";
 export default function JoinNetwork() {
     const form = useRef<HTMLFormElement>(null);
     const [loading, setLoading] = useState(false);
+    const [smsConsent, setSmsConsent] = useState(false);
     const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
     const serviceId = EMAILJS_CONFIG.SERVICE_ID;
     const templateId = EMAILJS_CONFIG.TEMPLATE_ID;
@@ -41,6 +42,7 @@ export default function JoinNetwork() {
                     setLoading(false);
                     setStatus({ type: 'success', message: 'Message sent successfully!' });
                     form.current?.reset();
+                    setSmsConsent(false);
                 }, (error) => {
                     setLoading(false);
                     setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
@@ -165,6 +167,23 @@ export default function JoinNetwork() {
                                     className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
                                     placeholder="Tell us about your fleet and lanes..."
                                 />
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <input
+                                    type="checkbox"
+                                    id="sms_consent_checkbox"
+                                    checked={smsConsent}
+                                    onChange={(e) => setSmsConsent(e.target.checked)}
+                                    className="mt-1 w-4 h-4 bg-black/40 border border-white/10 rounded text-primary focus:ring-primary/50 focus:ring-offset-0 cursor-pointer"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="sms_consent"
+                                    value={smsConsent ? "Enabled" : "Disabled"}
+                                />
+                                <label htmlFor="sms_consent_checkbox" className="text-sm text-gray-400 cursor-pointer">
+                                    I agree to receive SMS alerts from Advik Freight
+                                </label>
                             </div>
                             <button
                                 type="submit"

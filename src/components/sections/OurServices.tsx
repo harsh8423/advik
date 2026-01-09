@@ -63,40 +63,27 @@ export default function OurServices() {
         const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
         if (cards.length === 0) return;
 
-        // Set initial state for all cards
-        cards.forEach((card) => {
-            gsap.set(card, {
-                opacity: 0,
-                y: 60,
-                scale: 0.95,
-            });
-        });
-
         const ctx = gsap.context(() => {
-            // Create timeline for card animations
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 30%",
-                    end: "bottom 80%",
-                    scrub: 1.5,
-                },
-            });
-
-            // Animate cards with stagger
+            // Animate each card individually when it enters viewport
             cards.forEach((card, index) => {
-                const startPosition = index * 0.3;
-
-                tl.to(
+                gsap.fromTo(
                     card,
+                    {
+                        opacity: 0,
+                        y: 50,
+                    },
                     {
                         opacity: 1,
                         y: 0,
-                        scale: 1,
-                        duration: 0.8,
-                        ease: "power3.out",
-                    },
-                    startPosition
+                        duration: 0.6,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            toggleActions: "play none none none",
+                        },
+                        delay: index % 3 * 0.1, // Stagger effect for cards in same row
+                    }
                 );
             });
         }, sectionRef);
@@ -124,12 +111,6 @@ export default function OurServices() {
                 />
                 {/* Additional top and bottom darkening for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
-            </div>
-
-            {/* Background decorative elements */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -170,9 +151,7 @@ export default function OurServices() {
                                 className="group relative snap-center will-change-transform min-w-[280px] md:min-w-0"
                             >
                                 {/* Card */}
-                                <div className="relative h-full bg-card/40 backdrop-blur-xl border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary hover:-translate-y-2 shadow-2xl hover:shadow-primary/20 flex flex-col">
-                                    {/* Animated glow orb */}
-                                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                <div className="relative h-full bg-card/90 border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-1 shadow-xl hover:shadow-2xl flex flex-col">
 
                                     {/* Subtle grid pattern overlay */}
                                     <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] transition-opacity duration-500 pointer-events-none"

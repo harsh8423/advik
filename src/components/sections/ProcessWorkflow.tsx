@@ -38,7 +38,7 @@ const Workflow: React.FC = () => {
 
             {/* Connector Line (Desktop) - The Data Highway */}
             <div className="hidden lg:block absolute top-[5rem] left-0 right-0 px-20 h-2 z-0">
-                <div className="w-full h-full bg-white/10 rounded-full relative overflow-hidden backdrop-blur-sm border border-white/5">
+                <div className="w-full h-full bg-white/10 rounded-full relative overflow-hidden border border-white/5">
                     {/* Base Glow */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-advik-red/20 to-transparent opacity-50"></div>
 
@@ -49,9 +49,8 @@ const Workflow: React.FC = () => {
                         transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
                     />
 
-                    {/* Secondary Pulse (Slower) */}
                     <motion.div
-                        className="absolute top-0 left-0 w-64 h-full bg-gradient-to-r from-transparent via-advik-red to-transparent opacity-50 blur-md"
+                        className="absolute top-0 left-0 w-64 h-full bg-gradient-to-r from-transparent via-advik-red to-transparent opacity-50"
                         animate={{ x: ["-100%", "1200%"] }}
                         transition={{ repeat: Infinity, duration: 4, ease: "linear", delay: 1 }}
                     />
@@ -85,8 +84,8 @@ const Workflow: React.FC = () => {
                             {/* Card Container */}
                             <div className={`
                 relative w-full aspect-square rounded-2xl p-6 flex flex-col items-center justify-center gap-4
-                transition-all duration-500 border backdrop-blur-md overflow-hidden
-                ${isActive ? 'bg-white/10 border-advik-red/50 shadow-[0_0_30px_rgba(229,9,20,0.3)] scale-105' : 'bg-white/5 border-white/10 hover:border-white/30'}
+                transition-all duration-300 border overflow-hidden
+                ${isActive ? 'bg-white/10 border-advik-red/50 shadow-lg scale-105' : 'bg-white/5 border-white/10 hover:border-white/30'}
               `}>
 
                                 {/* Holographic Scan Effect on Hover */}

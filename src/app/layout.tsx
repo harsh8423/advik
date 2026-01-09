@@ -4,6 +4,7 @@ import "./globals.css";
 import { clsx } from "clsx";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import { ThemeProvider } from "@/components/theme-provider";
+import FloatingCallButton from "@/components/ui/FloatingCallButton";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
                     <SmoothScroll>
                         {children}
                     </SmoothScroll>
+                    <FloatingCallButton />
                 </ThemeProvider>
             </body>
         </html>
