@@ -6,6 +6,7 @@ import GenericHero from "@/components/sections/common/GenericHero";
 import GenericCTA from "@/components/sections/common/GenericCTA";
 import { motion } from "framer-motion";
 import { Check, Truck, DollarSign, Clock, MapPin, Shield } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const benefits = [
     {
@@ -41,6 +42,8 @@ const benefits = [
 ];
 
 export default function CarriersPage() {
+    const router = useRouter();
+
     return (
         <main className="bg-background min-h-screen text-foreground selection:bg-primary selection:text-white">
             <Navbar />
@@ -112,7 +115,10 @@ export default function CarriersPage() {
                         <p className="text-gray-300 mb-8">
                             Our onboarding process is quick and easy. Sign up today and start browsing available loads immediately.
                         </p>
-                        <button className="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-primary/25">
+                        <button
+                            onClick={() => router.push('/contact')}
+                            className="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-primary/25"
+                        >
                             Register as a Carrier
                         </button>
                     </div>
