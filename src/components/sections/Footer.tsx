@@ -116,10 +116,7 @@ export default function Footer() {
 
                 <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
                     <p>© 2025 Advik Inc. All rights reserved.</p>
-                    <div className="flex gap-6">
-                        <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
-                        <span className="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
-                    </div>
+                    <Link href="/privacy-policy" className="hover:text-white cursor-pointer transition-colors">Privacy Policy</Link>
                 </div>
             </div>
         </footer>
